@@ -129,6 +129,25 @@ body {
   padding-block: clamp(2.5rem, 4.7vw, 4.5rem);
 }
 
+/* Cover's image and overlay must span the section, outside the content width. */
+.at-hero-background > .wp-block-cover__image-background,
+.at-hero-background > .wp-block-cover__background {
+  max-width: none;
+}
+
+.at-hero-background > .wp-block-cover__inner-container {
+  width: 100%;
+  max-width: var(--at-wide);
+  padding-inline: 0;
+}
+
+/* Core centers constrained children with !important; anchor copy to the wrapper. */
+.at-hero-background > .wp-block-cover__inner-container > .at-hero-copy {
+  max-width: var(--wp--style--global--content-size);
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
 .at-hero-columns {
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center !important;

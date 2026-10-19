@@ -1,5 +1,13 @@
 # Prototype verification · 19 October 2026
 
+## Hero background images
+
+Alignment correction: removed the Cover inner container's extra horizontal padding and overrode core's forced centering of the hero copy. Live homepage measurements at 2224, 1920, 1440, 768, 390, and 320 CSS pixels confirmed identical left edges for the hero eyebrow, heading, button, mission text, and header wrapper. Background images remained full width and no horizontal overflow occurred. The mobile screenshot was visually checked; `git diff --check` passed. No saved page content was modified.
+
+Theme version 0.1.2 explicitly enables native background image and size controls. The existing Group hero can use these controls; the additional **Hero · Hintergrundbild** pattern uses a native Cover with a replaceable decorative image, focal point controls, and a 70% navy overlay. Existing page content is preserved. The version bump refreshes WordPress's cached theme pattern list.
+
+PHP lint, JSON parsing, `git diff --check`, and the read-only WordPress smoke check passed (18 patterns). WordPress core's JavaScript parser validated every theme pattern, template, and saved page with zero invalid blocks. An isolated headless Chrome preview of the new Cover pattern at 1440, 768, 390, and 320 CSS pixels showed no horizontal overflow or broken images; the background spanned the hero at every width. Desktop and mobile screenshots were visually inspected. This preview replaced markup only in browser memory, without saving page changes. The in-app browser execution tool was unavailable.
+
 ## Scope and audit
 
 The starting repository was a classic PHP theme with custom editor blocks, not a full block theme. It had no `theme.json` or `templates/*.html`. The conversion preserves the spacing scale, narrow/wide content principles, alternating button corners, editorial heading/lead roles, and reusable section approach. The old custom blocks, project/service/team post types and taxonomies, carousels, partner administration, video code, icon dependency, external fonts, branded assets, and PHP page templates were removed.

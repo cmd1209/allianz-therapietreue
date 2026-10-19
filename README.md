@@ -1,6 +1,6 @@
 # Allianz Therapietreue Deutschland
 
-Independent WordPress block theme, version 0.1.1. Requires WordPress 6.6+ and PHP 8.0+. No build step, JavaScript bundle, required plugin, external font service, or custom post type.
+Independent WordPress block theme, version 0.1.2. Requires WordPress 6.6+ and PHP 8.0+. No build step, JavaScript bundle, required plugin, external font service, or custom post type.
 
 ## Local review
 
@@ -27,6 +27,7 @@ The script is CLI-only, checks the local environment and theme path, creates mis
 ## Editing
 
 - **Homepage:** Pages → Startseite → Edit, or use **Edit Page** on the frontend toolbar. All homepage sections are ordinary editable blocks in the page body. The front-page template supplies only the header, content area, and footer.
+- **Hero background image:** Select the outer hero Group in List View, then open **Styles → Background** (German: **Stile → Hintergrund**) and choose an image from the Media Library or upload one. Use the native size and position controls to adjust the crop. Replace or remove the image in the same panel. The separate image column remains independently editable. For a full-width image behind the text with an adjustable overlay, insert **Hero · Hintergrundbild** from the Allianz Therapietreue pattern category, move it in place of the old hero, and transfer your copy before deleting the old section. Select the Cover block to replace its image, set its focal point, or adjust the navy overlay opacity. Check the crop and text readability on desktop and mobile. Backgrounds are decorative; keep meaningful image descriptions in a separate Image block.
 - **Supporting pages:** Pages → Edit. All sections are ordinary blocks. Use List View to find sections and move or replace them.
 - **Menus:** Appearance → Menus (German: Design → Menüs). Add, rename, reorder, nest, and remove links, then save. Manage Locations assigns the header and two footer menus. Assigned classic menus are the source of link content; core Navigation blocks render them with native mobile and submenu behavior. No menu-copy synchronization is needed. With no menu assigned, the starter links remain as a fallback; an assigned empty menu stays empty.
 - **Header/footer layout:** Appearance → Editor → Patterns → Template Parts. Edit menu links through Appearance → Menus; use the Site Editor for layout. The symbol is a replaceable Image block; the initiative name is editable text. The current lockup is provisional.
