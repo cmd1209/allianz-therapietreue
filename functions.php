@@ -59,6 +59,19 @@ function allianz_therapietreue_menu_blocks( $block ) {
         }
         unset( $block['attrs']['ref'] );
         $block['innerBlocks']  = parse_blocks( $markup );
+        if ( 'primary' === $location ) {
+            foreach ( $block['innerBlocks'] as &$item ) {
+                if ( 'core/navigation-link' !== $item['blockName'] ) {
+                    continue;
+                }
+                $label    = trim( wp_strip_all_tags( $item['attrs']['label'] ?? '' ) );
+                $fragment = wp_parse_url( $item['attrs']['url'] ?? '', PHP_URL_FRAGMENT );
+                if ( 'kontakt' === strtolower( $label ) || 'kontakt' === $fragment ) {
+                    $item['attrs']['className'] = trim( ( $item['attrs']['className'] ?? '' ) . ' at-menu-contact' );
+                }
+            }
+            unset( $item );
+        }
         $block['innerHTML']    = '';
         $block['innerContent'] = array_fill( 0, count( $block['innerBlocks'] ), null );
         return $block;

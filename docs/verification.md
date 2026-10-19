@@ -1,5 +1,15 @@
 # Prototype verification · 19 October 2026
 
+## Contact menu button
+
+The primary Kontakt link receives a button class during native menu conversion; the existing label, destination, and database menu remain unchanged. A local decorative SVG mask inherits the link color. PHP lint, the WordPress smoke check, and `git diff --check` passed. Isolated Chrome checks at 1440, 1024, 820, 768, 390, and 320 CSS pixels confirmed one visible contact button, the original `#kontakt` destination and target, a minimum 44px height, keyboard focus outline, and no horizontal overflow. Desktop and settled mobile-menu screenshots were inspected.
+
+## Shared token refactor
+
+The `tokens` branch retains native WordPress presets and adds six custom values for gutter, hero/intro spacing, subtle surface, and two media radii. Repeated CSS spacing and small type sizes reference existing presets. Wrapper widths reference WordPress's layout variables. No preset slugs, page content, menus, or saved Global Styles were changed.
+
+The WordPress smoke check (18 patterns) and `git diff --check` passed. Isolated Chrome compared the original and refactored CSS in the same loaded document on the homepage, Info-Materialien, and Award at 1440, 768, and 390 CSS pixels. All nine comparisons returned identical element geometry and sampled computed styles (padding, margin, gap, widths, backgrounds, radii, and typography), with no horizontal overflow. Comparing within one document excluded unrelated form-plugin initialization differences between separate page loads. The in-app browser execution tool was unavailable.
+
 ## Display typography
 
 Alan Sans is registered through native `theme.json` font presets with two local static faces (normal 500 and 700) and its bundled OFL license. H1/H2 default to 700 and H3 to 500. Font family and weight use native Global Styles and block typography controls. Removed component weight rules from contact/footer headings so saved editor choices can take effect.

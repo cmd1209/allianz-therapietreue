@@ -30,6 +30,7 @@ The script is CLI-only, checks the local environment and theme path, creates mis
 - **Hero background image:** Select the outer hero Group in List View, then open **Styles → Background** (German: **Stile → Hintergrund**) and choose an image from the Media Library or upload one. Use the native size and position controls to adjust the crop. Replace or remove the image in the same panel. The separate image column remains independently editable. For a full-width image behind the text with an adjustable overlay, insert **Hero · Hintergrundbild** from the Allianz Therapietreue pattern category, move it in place of the old hero, and transfer your copy before deleting the old section. Select the Cover block to replace its image, set its focal point, or adjust the navy overlay opacity. Check the crop and text readability on desktop and mobile. Backgrounds are decorative; keep meaningful image descriptions in a separate Image block.
 - **Supporting pages:** Pages → Edit. All sections are ordinary blocks. Use List View to find sections and move or replace them.
 - **Menus:** Appearance → Menus (German: Design → Menüs). Add, rename, reorder, nest, and remove links, then save. Manage Locations assigns the header and two footer menus. Assigned classic menus are the source of link content; core Navigation blocks render them with native mobile and submenu behavior. No menu-copy synchronization is needed. With no menu assigned, the starter links remain as a fallback; an assigned empty menu stays empty.
+- **Kontakt menu button:** Top-level primary links labeled Kontakt or pointing to `#kontakt` receive the button style and decorative mail icon. Edit the link normally under Appearance → Menus. To retain the treatment after changing both its label and destination, enable CSS Classes under Screen Options and add `at-menu-contact` to that menu item. Footer links stay unchanged.
 - **Header/footer layout:** Appearance → Editor → Patterns → Template Parts. Edit menu links through Appearance → Menus; use the Site Editor for layout. The symbol is a replaceable Image block; the initiative name is editable text. The current lockup is provisional.
 - **News:** Posts → Add New. Publish standard posts with optional featured images and excerpts. The homepage and Allianz query show the latest three, excluding sticky posts. There is a real empty-state message when no posts exist.
 - **Partners:** Replace the placeholder text in the partner columns with Image blocks and approved partner names/links. No partner organization is implied by the placeholders.
@@ -41,6 +42,19 @@ Patterns are inserted as editable blocks, not synchronized content. File changes
 ## Design system
 
 `theme.json` owns the editor palette, heading/body/navigation/button roles, fluid type sizes, spacing scale, content widths, and button shape. `assets/css/theme.css` supplies responsive component layouts and the same styling in the editor. Section widths retain the original theme's narrow/wide layout principles; the native Button block preserves the alternating corner treatment without its old JavaScript controls.
+
+The token structure uses native WordPress presets plus six shared values under `settings.custom`:
+
+| Source in `theme.json` | Purpose |
+| --- | --- |
+| `settings.layout` | Content and wide wrapper widths; CSS references WordPress's generated layout variables. |
+| `settings.spacing.spacingSizes` | Shared gaps, margins, and padding. Existing slugs 30/40/50/60 represent 1/1.5/2/3rem. |
+| `settings.custom.layout.gutter` | Shared page gutter and default root padding. |
+| `settings.custom.spacing.hero` / `intro` | Hero and page-intro vertical spacing. |
+| `settings.custom.surface.subtle` | Shared pale-teal section/notice background, derived from palette colors. |
+| `settings.custom.radius.media` / `hero` | Alternating media corners, 48px and 64px. The mobile hero's 40px treatment stays local. |
+
+For example, `settings.custom.surface.subtle` generates `--wp--custom--surface--subtle`. Custom values are maintained in the theme file; they do not add dedicated Site Editor controls. Native color, spacing, font, and layout controls remain editable in WordPress. Component proportions, breakpoints, and individual type treatments stay in CSS. Add a token when a value is shared or is a deliberate site-wide design decision; avoid recreating the original theme's full alias hierarchy. Existing preset slugs remain stable so saved blocks keep their references.
 
 Brand source: [Allianz Adhärenz Figma](https://www.figma.com/design/216VlC0GF4Y1wApMgvVbJY/Allianz-Adhaerenz?node-id=2-49). All 20 palette swatches were read directly from node `2:49`. The unmodified infinity/cross SVG comes from node `2:16`; replace it with the approved asset when available. The editable wordmark uses the requested initiative name, rather than the provisional outlined “Allianz Adhärenz” artwork in Figma. No website page layouts were present in that file at the time of inspection.
 

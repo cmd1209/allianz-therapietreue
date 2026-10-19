@@ -1,8 +1,8 @@
 /* Shared by the front end and block editor. Tokens live in theme.json. */
 :root {
   --at-line: var(--wp--preset--color--border);
-  --at-gutter: clamp(1.25rem, 4vw, 4rem);
-  --at-wide: 1240px;
+  --at-gutter: var(--wp--custom--layout--gutter);
+  --at-wide: var(--wp--style--global--wide-size);
   --at-section: var(--wp--preset--spacing--70);
 }
 
@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
+  scroll-padding-top: var(--wp--preset--spacing--50);
 }
 
 body {
@@ -70,7 +70,7 @@ body {
 
 .at-header-inner {
   justify-content: space-between;
-  gap: 2rem;
+  gap: var(--wp--preset--spacing--50);
 }
 
 .at-brand {
@@ -125,8 +125,36 @@ body {
   text-decoration-thickness: 2px;
 }
 
+.at-header .at-menu-primary .at-menu-contact > .wp-block-navigation-item__content {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--wp--preset--spacing--20);
+  min-height: 44px;
+  padding: 0.85rem var(--wp--preset--spacing--40);
+  border: 1px solid transparent;
+  border-radius: 0 16px 0 16px;
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--background);
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.at-header .at-menu-primary .at-menu-contact > .wp-block-navigation-item__content::before {
+  content: "";
+  flex: 0 0 1.25em;
+  width: 1.25em;
+  height: 1.25em;
+  background: currentColor;
+  mask: url("../images/mail.svg") center / contain no-repeat;
+}
+
+.at-header .at-menu-primary .at-menu-contact > .wp-block-navigation-item__content:hover {
+  background: var(--wp--preset--color--accent-dark);
+}
+
 .at-hero {
-  padding-block: clamp(2.5rem, 4.7vw, 4.5rem);
+  padding-block: var(--wp--custom--spacing--hero);
 }
 
 /* Cover's image and overlay must span the section, outside the content width. */
@@ -165,7 +193,7 @@ body {
 .at-hero h1 {
   font-size: clamp(2.65rem, 4.6vw, 4.25rem);
   line-height: 1.04;
-  margin-block: 1.1rem 1.5rem;
+  margin-block: 1.1rem var(--wp--preset--spacing--40);
 }
 
 .at-text-teal {
@@ -178,7 +206,7 @@ body {
 }
 
 .at-hero .wp-block-buttons {
-  margin-top: 2rem;
+  margin-top: var(--wp--preset--spacing--50);
 }
 
 .at-hero-media {
@@ -194,7 +222,7 @@ body {
   width: 100%;
   aspect-ratio: 1.04;
   object-fit: cover;
-  border-radius: 0 64px 0 64px;
+  border-radius: 0 var(--wp--custom--radius--hero) 0 var(--wp--custom--radius--hero);
 }
 
 .at-image-caption {
@@ -217,7 +245,7 @@ body {
 }
 
 .at-section h2 {
-  margin-top: 1rem;
+  margin-top: var(--wp--preset--spacing--30);
   margin-bottom: 2.5rem;
 }
 
@@ -226,7 +254,7 @@ body {
 }
 
 .at-mission-grid {
-  gap: 2rem;
+  gap: var(--wp--preset--spacing--50);
   margin-top: 3.5rem;
   margin-bottom: 0;
 }
@@ -237,7 +265,7 @@ body {
 }
 
 .at-card-number {
-  font-size: 0.875rem;
+  font-size: var(--wp--preset--font-size--small);
   font-weight: 700;
   color: var(--wp--preset--color--accent-dark);
   margin-bottom: 2.25rem;
@@ -253,7 +281,7 @@ body {
 }
 
 .at-about {
-  background: color-mix(in srgb, var(--wp--preset--color--soft) 24%, white);
+  background: var(--wp--custom--surface--subtle);
 }
 
 .at-about-columns {
@@ -269,16 +297,16 @@ body {
 .at-about img {
   display: block;
   width: 100%;
-  border-radius: 0 48px 0 48px;
+  border-radius: 0 var(--wp--custom--radius--media) 0 var(--wp--custom--radius--media);
 }
 
 .at-about h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--wp--preset--spacing--40);
 }
 
 .at-note {
   color: var(--wp--preset--color--muted);
-  font-size: 0.875rem;
+  font-size: var(--wp--preset--font-size--small);
 }
 
 .is-style-text-link .wp-block-button__link {
@@ -301,12 +329,12 @@ body {
 }
 
 .at-news .wp-block-post-template {
-  gap: 2rem;
+  gap: var(--wp--preset--spacing--50);
 }
 
 .at-news-card {
   border-top: 1px solid var(--at-line);
-  padding-block: 1.5rem 2rem;
+  padding-block: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
 }
 
 .at-news-card .wp-block-post-featured-image {
@@ -320,7 +348,7 @@ body {
 .at-news-card h3 {
   font-size: clamp(1.4rem, 2vw, 1.75rem);
   line-height: 1.2;
-  margin-block: 0.75rem 1rem;
+  margin-block: 0.75rem var(--wp--preset--spacing--30);
 }
 
 .at-news-card :is(h2, h3) a {
@@ -333,7 +361,7 @@ body {
 
 .at-news-card .wp-block-post-date {
   color: var(--wp--preset--color--muted);
-  font-size: 0.875rem;
+  font-size: var(--wp--preset--font-size--small);
 }
 
 .at-partners {
@@ -341,13 +369,13 @@ body {
 }
 
 .at-partner-grid {
-  margin-top: 3rem;
-  gap: 1rem;
+  margin-top: var(--wp--preset--spacing--60);
+  gap: var(--wp--preset--spacing--30);
 }
 
 .at-partner {
   border: 1px solid var(--at-line);
-  padding: 2rem 1rem;
+  padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--30);
   text-align: center;
 }
 
@@ -379,14 +407,14 @@ body {
 
 .at-contact-status {
   border-top: 1px solid var(--wp--preset--color--accent-dark);
-  padding-top: 1rem;
+  padding-top: var(--wp--preset--spacing--30);
   font-weight: 700;
 }
 
 .at-footer {
   background: var(--wp--preset--color--foreground);
   color: var(--wp--preset--color--background);
-  padding-block: 4rem 1.5rem;
+  padding-block: 4rem var(--wp--preset--spacing--40);
 }
 
 .at-footer a {
@@ -405,7 +433,7 @@ body {
 }
 
 .at-footer-columns {
-  gap: 3rem;
+  gap: var(--wp--preset--spacing--60);
 }
 
 .at-footer-columns > .wp-block-column:first-child {
@@ -419,23 +447,23 @@ body {
 
 .at-footer-name {
   color: var(--wp--preset--color--soft);
-  font-size: 0.875rem;
+  font-size: var(--wp--preset--font-size--small);
 }
 
 .at-footer-bottom {
   border-top: 1px solid var(--wp--preset--color--blue-mid);
-  padding-top: 1.5rem;
-  margin-top: 3rem;
+  padding-top: var(--wp--preset--spacing--40);
+  margin-top: var(--wp--preset--spacing--60);
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--wp--preset--spacing--30);
 }
 
 .at-page-intro {
-  padding-block: clamp(3rem, 7vw, 6rem);
+  padding-block: var(--wp--custom--spacing--intro);
 }
 
 .at-page-intro h1 {
-  margin-block: 1.25rem 2rem;
+  margin-block: 1.25rem var(--wp--preset--spacing--50);
 }
 
 .at-page-intro > .has-lead-font-size {
@@ -451,21 +479,21 @@ body {
 .at-anchor-nav p {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 2.5rem;
+  gap: var(--wp--preset--spacing--30) 2.5rem;
   font-size: 0.9375rem;
   font-weight: 700;
 }
 
 .at-editorial {
-  padding-top: 2rem;
+  padding-top: var(--wp--preset--spacing--50);
 }
 
 .at-editorial > * {
-  max-width: 760px;
+  max-width: var(--wp--style--global--content-size);
 }
 
 .at-editorial h2 {
-  margin-block: 3rem 1.5rem;
+  margin-block: var(--wp--preset--spacing--60) var(--wp--preset--spacing--40);
 }
 
 .at-editorial p + h2 {
@@ -473,7 +501,7 @@ body {
 }
 
 .at-infographic {
-  background: color-mix(in srgb, var(--wp--preset--color--soft) 24%, white);
+  background: var(--wp--custom--surface--subtle);
 }
 
 .at-infographic img {
@@ -482,7 +510,7 @@ body {
 }
 
 .at-award-image .wp-block-image {
-  margin-block: 0 2rem;
+  margin-block: 0 var(--wp--preset--spacing--50);
 }
 
 .at-award-image img {
@@ -490,11 +518,11 @@ body {
   width: 100%;
   max-height: 380px;
   object-fit: cover;
-  border-radius: 0 48px 0 48px;
+  border-radius: 0 var(--wp--custom--radius--media) 0 var(--wp--custom--radius--media);
 }
 
 .at-download-grid {
-  gap: 2rem;
+  gap: var(--wp--preset--spacing--50);
 }
 
 .is-style-download-card {
@@ -512,8 +540,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: var(--wp--preset--spacing--30);
+  margin-top: var(--wp--preset--spacing--50);
   font-size: 0.9375rem;
 }
 
@@ -536,13 +564,13 @@ body {
 
 .at-notice,
 .at-form-slot {
-  background: color-mix(in srgb, var(--wp--preset--color--soft) 24%, white);
-  padding: 1.5rem;
+  background: var(--wp--custom--surface--subtle);
+  padding: var(--wp--preset--spacing--40);
   border-left: 3px solid var(--wp--preset--color--accent-dark);
 }
 
 .at-form-slot {
-  margin-block: 2rem;
+  margin-block: var(--wp--preset--spacing--50);
 }
 
 .at-form-slot :is(input, textarea, select) {
@@ -569,21 +597,21 @@ body {
 
 @media (min-width: 782px) {
   .at-hero-copy {
-    padding-bottom: 1rem;
+    padding-bottom: var(--wp--preset--spacing--30);
   }
 }
 
 @media (max-width: 900px) {
   .at-header-inner {
-    gap: 1rem;
+    gap: var(--wp--preset--spacing--30);
   }
 
   .at-header .wp-block-navigation__container {
-    gap: 1rem;
+    gap: var(--wp--preset--spacing--30);
   }
 
   .at-header .wp-block-navigation {
-    font-size: 0.875rem;
+    font-size: var(--wp--preset--font-size--small);
   }
 }
 
@@ -592,7 +620,7 @@ body {
   .at-mission-grid,
   .at-about-columns,
   .at-contact-columns {
-    gap: 2rem;
+    gap: var(--wp--preset--spacing--50);
   }
 
   .at-hero h1 {
@@ -605,11 +633,11 @@ body {
   }
 
   .at-hero .wp-block-buttons {
-    margin-top: 1.5rem;
+    margin-top: var(--wp--preset--spacing--40);
   }
 
   .at-card-number {
-    margin-bottom: 1rem;
+    margin-bottom: var(--wp--preset--spacing--30);
   }
 
   .at-partner-grid {
@@ -622,7 +650,7 @@ body {
   }
 
   .at-footer-columns {
-    gap: 1.5rem;
+    gap: var(--wp--preset--spacing--40);
   }
 
   .at-footer-bottom {
@@ -633,7 +661,7 @@ body {
 
 @media (max-width: 599px) {
   .at-header {
-    padding-block: 1rem;
+    padding-block: var(--wp--preset--spacing--30);
   }
 
   .at-header .wp-block-navigation__responsive-container.is-menu-open {
