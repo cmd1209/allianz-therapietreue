@@ -369,6 +369,12 @@
         "typography": {
           "fontSize": "var:preset|font-size|display"
         }
+      },
+      "core/paragraph": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|alan-sans",
+          "fontWeight": "500"
+        }
       }
     }
   },
