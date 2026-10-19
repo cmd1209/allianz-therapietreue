@@ -1,0 +1,35 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:group {"layout":{"type":"default"},"className":"at-main","tagName":"main"} -->
+<main class="wp-block-group at-main"><!-- wp:group {"layout":{"type":"constrained"},"className":"at-section"} -->
+<div class="wp-block-group at-section"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Aktuelles</h1>
+<!-- /wp:heading -->
+<!-- wp:query {"queryId":2,"query":{"inherit":true}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:group {"layout":{"type":"constrained"},"className":"at-news-card"} -->
+<div class="wp-block-group at-news-card"><!-- wp:post-date {"format":"d.m.Y","fontSize":"small"} /-->
+<!-- wp:post-title {"level":2,"isLink":true} /-->
+<!-- wp:post-excerpt {"moreText":"Weiterlesen ↗"} /-->
+</div>
+<!-- /wp:group -->
+
+<!-- /wp:post-template -->
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next /-->
+
+<!-- /wp:query-pagination -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>Noch keine Beiträge vorhanden.</p>
+<!-- /wp:paragraph -->
+
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

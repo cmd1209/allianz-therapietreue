@@ -1,0 +1,357 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1240px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "slug": "background",
+          "name": "Hintergrund",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "foreground",
+          "name": "Text · Navy",
+          "color": "#032b46"
+        },
+        {
+          "slug": "primary",
+          "name": "Marke · Deep Current",
+          "color": "#05416a"
+        },
+        {
+          "slug": "accent",
+          "name": "Marke · Vital Teal",
+          "color": "#039782"
+        },
+        {
+          "slug": "accent-dark",
+          "name": "Aktion · Teal dunkel",
+          "color": "#026456"
+        },
+        {
+          "slug": "soft",
+          "name": "Fläche · Teal hell",
+          "color": "#acddd6"
+        },
+        {
+          "slug": "teal-mid",
+          "name": "Vital Teal · Mittel",
+          "color": "#59baad"
+        },
+        {
+          "slug": "teal-deep",
+          "name": "Vital Teal · Tief",
+          "color": "#01322b"
+        },
+        {
+          "slug": "blue-soft",
+          "name": "Deep Current · Hell",
+          "color": "#adc0ce"
+        },
+        {
+          "slug": "blue-mid",
+          "name": "Deep Current · Mittel",
+          "color": "#5a829d"
+        },
+        {
+          "slug": "inverse",
+          "name": "Fläche · Navy tief",
+          "color": "#021523"
+        },
+        {
+          "slug": "warm",
+          "name": "Akzent · Golden Hour",
+          "color": "#e7a219"
+        },
+        {
+          "slug": "warm-soft",
+          "name": "Golden Hour · Hell",
+          "color": "#f7e0b3"
+        },
+        {
+          "slug": "warm-mid",
+          "name": "Golden Hour · Mittel",
+          "color": "#efc267"
+        },
+        {
+          "slug": "warm-dark",
+          "name": "Golden Hour · Dunkel",
+          "color": "#986b10"
+        },
+        {
+          "slug": "warm-deep",
+          "name": "Golden Hour · Tief",
+          "color": "#4c3508"
+        },
+        {
+          "slug": "border",
+          "name": "Linien",
+          "color": "#d0d0d0"
+        },
+        {
+          "slug": "muted",
+          "name": "Sekundärer Text",
+          "color": "#414141"
+        },
+        {
+          "slug": "neutral-mid",
+          "name": "Neutral · Mittel",
+          "color": "#868686"
+        },
+        {
+          "slug": "black",
+          "name": "Schwarz",
+          "color": "#000000"
+        }
+      ],
+      "gradients": [
+        {
+          "slug": "teal-navy",
+          "name": "Teal → Navy",
+          "gradient": "linear-gradient(180deg, #039782 0%, #05416a 100%)"
+        },
+        {
+          "slug": "gold-navy",
+          "name": "Gold → Navy",
+          "gradient": "linear-gradient(180deg, #e7a219 0%, #05416a 100%)"
+        },
+        {
+          "slug": "gold-teal",
+          "name": "Gold → Teal",
+          "gradient": "linear-gradient(180deg, #e7a219 0%, #039782 100%)"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "em",
+        "%",
+        "vw"
+      ],
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "name": "XS",
+          "size": "0.5rem"
+        },
+        {
+          "slug": "30",
+          "name": "S",
+          "size": "1rem"
+        },
+        {
+          "slug": "40",
+          "name": "M",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "50",
+          "name": "L",
+          "size": "2rem"
+        },
+        {
+          "slug": "60",
+          "name": "XL",
+          "size": "3rem"
+        },
+        {
+          "slug": "70",
+          "name": "Section",
+          "size": "clamp(3.5rem, 7vw, 6.5rem)"
+        },
+        {
+          "slug": "80",
+          "name": "Large section",
+          "size": "clamp(5rem, 9vw, 8rem)"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "defaultFontSizes": false,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "System Sans · vorläufig",
+          "fontFamily": "Arial, Helvetica, sans-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Klein",
+          "size": "0.875rem",
+          "fluid": false
+        },
+        {
+          "slug": "body",
+          "name": "Text",
+          "size": "1.0625rem",
+          "fluid": false
+        },
+        {
+          "slug": "lead",
+          "name": "Einleitung",
+          "size": "clamp(1.125rem, 1.7vw, 1.375rem)",
+          "fluid": false
+        },
+        {
+          "slug": "heading-3",
+          "name": "Überschrift 3",
+          "size": "clamp(1.5rem, 2.5vw, 2rem)",
+          "fluid": false
+        },
+        {
+          "slug": "heading-2",
+          "name": "Überschrift 2",
+          "size": "clamp(2rem, 3.8vw, 3.25rem)",
+          "fluid": false
+        },
+        {
+          "slug": "display",
+          "name": "Titel",
+          "size": "clamp(2.65rem, 5.4vw, 5rem)",
+          "fluid": false
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|background",
+      "text": "var:preset|color|foreground"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "fontSize": "var:preset|font-size|body",
+      "lineHeight": "1.65"
+    },
+    "spacing": {
+      "blockGap": "1.5rem",
+      "padding": {
+        "left": "clamp(1.25rem, 4vw, 4rem)",
+        "right": "clamp(1.25rem, 4vw, 4rem)"
+      }
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontWeight": "700",
+          "lineHeight": "1.08",
+          "letterSpacing": "-0.035em"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var:preset|font-size|display"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var:preset|font-size|heading-2"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var:preset|font-size|heading-3"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|primary"
+        },
+        ":hover": {
+          "color": {
+            "text": "var:preset|color|accent-dark"
+          }
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "0 16px 0 16px",
+          "width": "1px",
+          "color": "transparent"
+        },
+        "color": {
+          "background": "var:preset|color|primary",
+          "text": "var:preset|color|background"
+        },
+        "spacing": {
+          "padding": {
+            "top": "0.85rem",
+            "bottom": "0.85rem",
+            "left": "1.5rem",
+            "right": "1.5rem"
+          }
+        },
+        "typography": {
+          "fontSize": "1rem",
+          "fontWeight": "700",
+          "lineHeight": "1.4"
+        },
+        ":hover": {
+          "color": {
+            "background": "var:preset|color|accent-dark",
+            "text": "var:preset|color|background"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/post-title": {
+        "typography": {
+          "fontSize": "var:preset|font-size|display"
+        }
+      },
+      "core/navigation": {
+        "typography": {
+          "fontSize": "0.9375rem",
+          "fontWeight": "600"
+        }
+      },
+      "core/post-excerpt": {
+        "typography": {
+          "fontSize": "1rem"
+        }
+      },
+      "core/query-title": {
+        "typography": {
+          "fontSize": "var:preset|font-size|display"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Kopfzeile",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Fußzeile",
+      "area": "footer"
+    }
+  ],
+  "customTemplates": [
+    {
+      "name": "page-canvas",
+      "title": "Inhaltsseite · freie Blöcke",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ]
+}

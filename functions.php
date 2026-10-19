@@ -1,262 +1,68 @@
 <?php
+/** Theme setup. @package AllianzTherapietreue */
+defined( 'ABSPATH' ) || exit;
 
-require_once get_template_directory() . '/inc/button-block.php';
-require_once get_template_directory() . '/inc/inview.php';
-require_once get_template_directory() . '/inc/hero-video.php';
-require_once get_template_directory() . '/inc/partner-logos.php';
-require_once get_template_directory() . '/inc/partner-logos-admin.php';
-require_once get_template_directory() . '/inc/patterns.php';
-require_once get_template_directory() . '/inc/page-hero.php';
-require_once get_template_directory() . '/inc/typography.php';
-require_once get_template_directory() . '/inc/media.php';
-require_once get_template_directory() . '/inc/favicons.php';
-require_once get_template_directory() . '/inc/post-types.php';
-require_once get_template_directory() . '/inc/team.php';
-require_once get_template_directory() . '/inc/project-categories.php';
-require_once get_template_directory() . '/inc/service-pages.php';
-require_once get_template_directory() . '/inc/gradients.php';
-require_once get_template_directory() . '/inc/project-cta.php';
-require_once get_template_directory() . '/inc/project-slider.php';
-
-function vita_health_register_menus() {
-    register_nav_menu('primary', __('Primary Navigation', 'vitahealthmedia'));
-    register_nav_menu('footer-services', __('Footer Services', 'vitahealthmedia'));
-    register_nav_menu('footer-links', __('Footer Links', 'vitahealthmedia'));
+function allianz_therapietreue_setup() {
+    load_theme_textdomain( 'allianz-therapietreue', get_template_directory() . '/languages' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'assets/css/theme.css' );
+    add_theme_support( 'responsive-embeds' );
+    register_nav_menus( array(
+        'primary'      => __( 'Hauptnavigation', 'allianz-therapietreue' ),
+        'footer-links' => __( 'Fußzeile · Themen', 'allianz-therapietreue' ),
+        'footer-legal' => __( 'Fußzeile · Weitere Links', 'allianz-therapietreue' ),
+    ) );
 }
+add_action( 'after_setup_theme', 'allianz_therapietreue_setup' );
 
-add_action('after_setup_theme', 'vita_health_register_menus');
-
-function vita_health_navigation_classes($classes, $item, $args) {
-    if ($args->theme_location === 'primary' && trim($item->title) === 'Kontakt') {
-        $classes[] = 'navigation__contact';
-    }
-    return $classes;
+function allianz_therapietreue_assets() {
+    wp_enqueue_style(
+        'allianz-therapietreue',
+        get_theme_file_uri( 'assets/css/theme.css' ),
+        array(),
+        (string) filemtime( get_theme_file_path( 'assets/css/theme.css' ) )
+    );
 }
+add_action( 'wp_enqueue_scripts', 'allianz_therapietreue_assets' );
 
-add_filter('nav_menu_css_class', 'vita_health_navigation_classes', 10, 3);
-
-function vita_health_navigation_contact_icon($title, $item, $args) {
-    if ($args->theme_location === 'primary' && trim($item->title) === 'Kontakt') {
-        $title .= '<span class="button__icon" aria-hidden="true"><i data-lucide="send"></i></span>';
-    }
-    return $title;
+function allianz_therapietreue_patterns() {
+    register_block_pattern_category( 'allianz-therapietreue', array( 'label' => __( 'Allianz Therapietreue', 'allianz-therapietreue' ) ) );
+    register_block_style( 'core/button', array( 'name' => 'text-link', 'label' => __( 'Textlink mit Pfeil', 'allianz-therapietreue' ) ) );
+    register_block_style( 'core/group', array( 'name' => 'download-card', 'label' => __( 'Material-Karte', 'allianz-therapietreue' ) ) );
+    register_block_style( 'core/paragraph', array( 'name' => 'eyebrow', 'label' => __( 'Rubrik', 'allianz-therapietreue' ) ) );
 }
+add_action( 'init', 'allianz_therapietreue_patterns' );
 
-add_filter('nav_menu_item_title', 'vita_health_navigation_contact_icon', 10, 3);
-
-function vita_health_footer_link_attributes($attributes, $item, $args) {
-    if ($args->theme_location !== 'footer-services') {
-        return $attributes;
+/** Render assigned classic menus through core's accessible Navigation block. */
+function allianz_therapietreue_menu_blocks( $block ) {
+    if ( 'core/navigation' !== $block['blockName'] ) {
+        return $block;
     }
-
-    $term = get_term_by('name', trim($item->title), 'project_category');
-    if ($term) {
-        $url = get_term_link($term);
-        if (!is_wp_error($url)) {
-            $attributes['href'] = $url;
-            return $attributes;
+    $classes   = explode( ' ', $block['attrs']['className'] ?? '' );
+    $locations = get_nav_menu_locations();
+    foreach ( array( 'primary', 'footer-links', 'footer-legal' ) as $location ) {
+        if ( ! in_array( 'at-menu-' . $location, $classes, true ) || empty( $locations[ $location ] ) ) {
+            continue;
         }
-    }
-
-    if (isset($attributes['href']) && strpos($attributes['href'], '#') === 0) {
-        $attributes['href'] = home_url('/') . $attributes['href'];
-    }
-    return $attributes;
-}
-
-add_filter('nav_menu_link_attributes', 'vita_health_footer_link_attributes', 10, 3);
-
-function vita_health_theme_setup() {
-    add_theme_support('post-thumbnails');
-}
-
-add_action('after_setup_theme', 'vita_health_theme_setup');
-
-function vita_health_enqueue_assets() {
-    $theme_version = wp_get_theme()->get('Version');
-
-    wp_enqueue_style(
-        'vita-health-colors',
-        get_template_directory_uri() . '/assets/css/color.css',
-        ['vita-health-tokens'],
-        filemtime(get_template_directory() . '/assets/css/color.css')
-    );
-
-    if (is_post_type_archive('project')) {
-        wp_enqueue_style(
-            'vita-health-project-archive',
-            get_template_directory_uri() . '/assets/css/components/project-archive.css',
-            ['vita-health-project-slider'],
-            filemtime(get_template_directory() . '/assets/css/components/project-archive.css')
-        );
-    }
-    if (is_post_type_archive('project')) {
-        wp_enqueue_script(
-            'vita-health-project-archive',
-            get_template_directory_uri() . '/assets/js/project-archive.js',
-            ['vita-health-icons'],
-            filemtime(get_template_directory() . '/assets/js/project-archive.js'),
-            true
-        );
-    }
-
-    if (is_singular(['project', 'service_page']) || is_tax('project_category')) {
-        wp_enqueue_style(
-            'vita-health-project-hero',
-            get_template_directory_uri() . '/assets/css/components/project-hero.css',
-            ['vita-health-base', 'vita-health-typography', 'vita-health-colors'],
-            filemtime(get_template_directory() . '/assets/css/components/project-hero.css')
-        );
-    }
-
-    wp_enqueue_script(
-        'vita-health-contact',
-        get_template_directory_uri() . '/assets/js/contact.js',
-        [],
-        filemtime(get_template_directory() . '/assets/js/contact.js'),
-        true
-    );
-
-    wp_enqueue_script(
-        'vita-health-inview',
-        get_template_directory_uri() . '/assets/js/inview.js',
-        [],
-        filemtime(get_template_directory() . '/assets/js/inview.js'),
-        true
-    );
-
-    wp_enqueue_style(
-        'vita-health-tokens',
-        get_template_directory_uri() . '/assets/css/tokens.css',
-        [],
-        filemtime(get_template_directory() . '/assets/css/tokens.css')
-    );
-
-    wp_enqueue_style(
-        'vita-health-base',
-        get_template_directory_uri() . '/assets/css/base.css',
-        ['vita-health-tokens'],
-        filemtime(get_template_directory() . '/assets/css/base.css')
-    );
-
-    wp_enqueue_style(
-        'vita-health-typography',
-        get_template_directory_uri() . '/assets/css/typography.css',
-        ['vita-health-tokens', 'vita-health-base'],
-        filemtime(get_template_directory() . '/assets/css/typography.css')
-    );
-
-    wp_enqueue_style(
-        'vita-health-buttons',
-        get_template_directory_uri() . '/assets/css/buttons.css',
-        ['vita-health-tokens'],
-        filemtime(get_template_directory() . '/assets/css/buttons.css')
-    );
-
-    wp_enqueue_style(
-        'vita-health-components',
-        get_template_directory_uri() . '/assets/css/components.css',
-        ['vita-health-tokens', 'vita-health-base', 'vita-health-typography', 'vita-health-buttons'],
-        filemtime(get_template_directory() . '/assets/css/components.css')
-    );
-
-    wp_enqueue_style(
-        'vita-health-style',
-        get_stylesheet_uri(),
-        ['vita-health-components'],
-        $theme_version
-    );
-
-    wp_enqueue_style(
-        'vita-health-hero-video',
-        get_template_directory_uri() . '/assets/css/components/hero-video.css',
-        ['vita-health-base', 'vita-health-typography', 'vita-health-buttons'],
-        filemtime(get_template_directory() . '/assets/css/components/hero-video.css')
-    );
-    wp_enqueue_script(
-        'vita-health-hero-video',
-        get_template_directory_uri() . '/assets/js/hero-video.js',
-        [],
-        filemtime(get_template_directory() . '/assets/js/hero-video.js'),
-        true
-    );
-
-    wp_enqueue_script(
-        'vita-health-navigation',
-        get_template_directory_uri() . '/assets/js/navigation.js',
-        [],
-        $theme_version,
-        true
-    );
-
-    wp_enqueue_script(
-        'vita-health-lucide',
-        get_template_directory_uri() . '/assets/js/vendor/lucide.min.js',
-        [],
-        filemtime(get_template_directory() . '/assets/js/vendor/lucide.min.js'),
-        true
-    );
-
-    wp_enqueue_script(
-        'vita-health-icons',
-        get_template_directory_uri() . '/assets/js/icons.js',
-        ['vita-health-lucide'],
-        filemtime(get_template_directory() . '/assets/js/icons.js'),
-        true
-    );
-}
-
-add_action('wp_enqueue_scripts', 'vita_health_enqueue_assets');
-
-function vita_health_project_archive_wpforms_styles($force_load) {
-    if ($force_load || !is_post_type_archive('project')) {
-        return $force_load;
-    }
-
-    $content_page = get_page_by_path('projekt-archiv-inhalt');
-    if (!$content_page || $content_page->post_status !== 'publish') {
-        return false;
-    }
-
-    return has_block('wpforms/form-selector', $content_page)
-        || has_shortcode($content_page->post_content, 'wpforms');
-}
-add_filter('wpforms_frontend_assets_header_force_load', 'vita_health_project_archive_wpforms_styles');
-
-function vita_disable_current_state_for_anchor_links($items) {
-    foreach ($items as $item) {
-        $url = $item->url ?? '';
-
-        if (strpos($url, '#') !== false) {
-            $item->classes = array_diff(
-                $item->classes,
-                [
-                    'current-menu-item',
-                    'current_page_item',
-                    'current-menu-parent',
-                    'current_page_parent',
-                    'current-menu-ancestor',
-                    'current_page_ancestor',
-                ]
-            );
-
-            $item->current = false;
-            $item->current_item_parent = false;
-            $item->current_item_ancestor = false;
+        $menu = wp_get_nav_menu_object( $locations[ $location ] );
+        if ( ! $menu ) {
+            return $block;
         }
+        $markup = WP_Classic_To_Block_Menu_Converter::convert( $menu );
+        if ( is_wp_error( $markup ) ) {
+            return $block;
+        }
+        // A deliberately empty assigned menu must not fall back to every page.
+        if ( '' === $markup ) {
+            return array( 'blockName' => null, 'attrs' => array(), 'innerBlocks' => array(), 'innerHTML' => '', 'innerContent' => array() );
+        }
+        unset( $block['attrs']['ref'] );
+        $block['innerBlocks']  = parse_blocks( $markup );
+        $block['innerHTML']    = '';
+        $block['innerContent'] = array_fill( 0, count( $block['innerBlocks'] ), null );
+        return $block;
     }
-
-    return $items;
+    return $block;
 }
-
-add_filter('wp_nav_menu_objects', 'vita_disable_current_state_for_anchor_links');
-
-function vita_disable_aria_current_for_anchor_links($atts, $item) {
-    if (!empty($item->url) && strpos($item->url, '#') !== false) {
-        unset($atts['aria-current']);
-    }
-
-    return $atts;
-}
-
-add_filter('nav_menu_link_attributes', 'vita_disable_aria_current_for_anchor_links', 10, 2);
+add_filter( 'render_block_data', 'allianz_therapietreue_menu_blocks' );

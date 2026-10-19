@@ -1,10 +1,13 @@
 /*
-Theme Name: Vitahealthmedia
+Theme Name: Allianz Therapietreue Deutschland
+Description: Eine eigenständige, redaktionelle Block-Theme für Allianz Therapietreue Deutschland.
 Author: CMD-Design
-Version: 1.0
+Version: 0.1.1
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.0
+Text Domain: allianz-therapietreue
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: block-patterns, full-site-editing, custom-colors, editor-style
 */
-
-body {
-  color: var(--color-text-default);
-  background: var(--color-background-default);
-}

@@ -1,104 +1,23 @@
 # AGENTS.md
 
-## Project: Vita Health WordPress Theme
+## Project: Allianz Therapietreue Deutschland
 
-This repository contains the custom WordPress theme for the Vita Health Media website relaunch.
+This repository is an independent custom WordPress block theme. Work only inside this theme unless the user explicitly authorizes local WordPress content setup. Never modify the original source site's repository or deployment configuration.
 
-The design phase is already substantially complete.
+## Design and implementation
 
-Your job is not to invent a new visual direction.
+- Primary brand reference: https://www.figma.com/design/216VlC0GF4Y1wApMgvVbJY/Allianz-Adhaerenz?node-id=2-49
+- Use the inspected navy/teal palette and infinity/cross direction. The logo is provisional and must stay replaceable.
+- Keep page content, including the homepage, in normal editable page bodies. Templates supply the surrounding layout.
+- Keep menus editable in Appearance → Menus. The marked native Navigation blocks render assigned menu locations. Header/footer layout remains editable in the Site Editor.
+- Use standard posts for news. Avoid custom post types, frameworks and unnecessary dependencies.
+- Keep semantic tokens, layout widths, spacing and typography in `theme.json`.
+- Keep shared frontend/editor component CSS in `assets/css/theme.css`, using expanded readable formatting.
+- Prefer PHP, semantic HTML, CSS, native WordPress behavior and minimal vanilla JavaScript.
+- Do not invent statistics, medical claims, Award rules, partners or contact details. Mark missing content clearly.
+- Fonts and assets must be locally hosted and licensed. The current system font stack is provisional.
+- The Award slot is a native Group block. Integrate a configured form plugin instead of adding a nonfunctional HTML form.
 
-Your job is to translate the approved design system, page layouts, and tested prototype behavior into a clean, maintainable WordPress theme.
+## Editing and checks
 
----
-
-## Primary Objective
-
-Build a custom WordPress theme that:
-
-- matches the approved Vita Health design
-- remains easy to maintain
-- uses reusable components and template parts
-- keeps the WordPress editing experience simple
-- avoids unnecessary dependencies
-- stays performant and accessible
-- can be deployed independently from WordPress core
-
-The implementation should feel like a design system translated into WordPress, not a collection of unrelated page templates.
-
----
-
-## Important Context
-
-A React / Vercel prototype has already been used to test:
-
-- buttons
-- typography
-- colors
-- design tokens
-- hero layout
-- responsive behavior
-- video treatment
-- spacing
-- component structure
-
-Where useful, preserve the same component logic and naming philosophy.
-
-Do not recreate React inside WordPress.
-
-Use the prototype as a reference for behavior and structure.
-
----
-
-## Development Philosophy
-
-Prefer simple solutions.
-
-Do not over-engineer.
-
-Before introducing:
-
-- a framework
-- a dependency
-- a JavaScript library
-- a custom abstraction
-- a plugin requirement
-
-ask whether the same result can be achieved cleanly with:
-
-- PHP
-- semantic HTML
-- CSS
-- native WordPress functionality
-- minimal vanilla JavaScript
-
-If yes, prefer the simpler solution.
-
-
-## CSS Formatting
-
-Use expanded, readable CSS formatting.
-
-Prefer:
-
-```css
-.component {
-  display: flex;
-  align-items: center;
-  gap: var(--gap-md);
-}
-
----
-
-## Theme Scope
-
-Only the custom theme should be considered part of this repository.
-
-Expected location:
-
-```text
-wp-content/themes/vita-health/
-
-## theme Figma Layout: https://www.figma.com/design/rcmTi7j9XxjcgfZCR3HCAN/Vita-Health-Wordpress?node-id=1384-6610&t=OdgpvvR0BBM3GR0B-1
-
-## theme prototype: https://vita-health-prieview.vercel.app/
+Read README.md for installation, editing conventions, local setup and outstanding dependencies. Existing page content and Site Editor customizations must not be overwritten by activation or routine updates. Run appropriate PHP, WordPress and browser checks for material changes. Keep the theme independently installable without a build step.
