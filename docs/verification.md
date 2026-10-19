@@ -1,5 +1,11 @@
 # Prototype verification · 19 October 2026
 
+## Display typography
+
+Alan Sans is registered through native `theme.json` font presets with two local static faces (normal 500 and 700) and its bundled OFL license. H1/H2 default to 700 and H3 to 500. Font family and weight use native Global Styles and block typography controls. Removed component weight rules from contact/footer headings so saved editor choices can take effect.
+
+The WordPress smoke check and `git diff --check` passed. Live browser checks confirmed both local font files loaded, H1/H2 computed at 700, H3 at 500, and the body retained Arial/Helvetica/system sans. Chrome's rendered-font inspection confirmed the actual H1 glyphs use Alan Sans Bold. Hero/content alignment and absence of horizontal overflow passed at 2224, 1920, 1440, 768, 390, and 320 CSS pixels. The mobile screenshot was visually inspected. No saved content or Global Styles were changed.
+
 ## Hero background images
 
 Alignment correction: removed the Cover inner container's extra horizontal padding and overrode core's forced centering of the hero copy. Live homepage measurements at 2224, 1920, 1440, 768, 390, and 320 CSS pixels confirmed identical left edges for the hero eyebrow, heading, button, mission text, and header wrapper. Background images remained full width and no horizontal overflow occurred. The mobile screenshot was visually checked; `git diff --check` passed. No saved page content was modified.

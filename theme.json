@@ -190,6 +190,31 @@
           "slug": "sans",
           "name": "System Sans · vorläufig",
           "fontFamily": "Arial, Helvetica, sans-serif"
+        },
+        {
+          "slug": "alan-sans",
+          "name": "Alan Sans · Display",
+          "fontFamily": "\"Alan Sans\", Arial, Helvetica, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Alan Sans",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/alan-sans/alan-sans-500.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Alan Sans",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/alan-sans/alan-sans-700.ttf"
+              ]
+            }
+          ]
         }
       ],
       "fontSizes": [
@@ -229,7 +254,8 @@
           "size": "clamp(2.65rem, 5.4vw, 5rem)",
           "fluid": false
         }
-      ]
+      ],
+      "fontWeight": true
     }
   },
   "styles": {
@@ -259,17 +285,26 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var:preset|font-size|display"
+          "fontSize": "var:preset|font-size|display",
+          "fontFamily": "var:preset|font-family|alan-sans",
+          "fontWeight": "700",
+          "letterSpacing": "0"
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "var:preset|font-size|heading-2"
+          "fontSize": "var:preset|font-size|heading-2",
+          "fontFamily": "var:preset|font-family|alan-sans",
+          "fontWeight": "700",
+          "letterSpacing": "0"
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "var:preset|font-size|heading-3"
+          "fontSize": "var:preset|font-size|heading-3",
+          "fontFamily": "var:preset|font-family|alan-sans",
+          "fontWeight": "500",
+          "letterSpacing": "0"
         }
       },
       "link": {
