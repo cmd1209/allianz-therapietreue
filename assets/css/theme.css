@@ -827,6 +827,30 @@ body {
   align-items: flex-start;
 }
 
+/* Page sections span the editor canvas, just as they do in the page templates.
+   Keep the root's native constrained layout for ordinary writing blocks. */
+.editor-styles-wrapper:has(.is-root-container > :is(.at-hero, .at-section, .at-page-intro, .at-anchor-nav, .at-award-image)) {
+  padding-inline: 0;
+}
+
+.editor-styles-wrapper :is(.is-root-container, .wp-block-post-content):has(> :is(.at-hero, .at-section, .at-page-intro, .at-anchor-nav, .at-award-image)) {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+
+.editor-styles-wrapper :is(.is-root-container, .wp-block-post-content) > :is(.at-hero, .at-section, .at-page-intro, .at-anchor-nav, .at-award-image) {
+  width: auto;
+  max-width: none;
+  margin-inline: 0 !important;
+  margin-block: 0;
+}
+
+/* The page-only editor omits the header; preview its clearance in the hero. */
+.editor-styles-wrapper .is-root-container > .at-hero-background:first-child {
+  padding-top: calc(var(--wp--custom--spacing--header) + var(--wp--custom--spacing--hero));
+}
+
 /* Applied by the frontend observer only; editor and no-JS content stay visible. */
 .at-reveal-ready {
   translate: 0 0;

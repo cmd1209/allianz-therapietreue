@@ -1,5 +1,13 @@
 # Prototype verification · 19 October 2026
 
+## Editor canvas widths · 21 October 2026
+
+Added editor-scoped rules for root-level theme sections: remove the root's duplicate gutter, allow outer sections to fill the canvas, and retain the existing inner content constraints. Opening image heroes also preview the frontend header clearance. Ordinary writing layouts and saved Global Styles remain unchanged. No content was saved.
+
+The installed WordPress post-editor source confirms a constrained fallback for nested Post Content templates. A local preview using the installed BlockEditorProvider/BlockList, actual saved homepage blocks, native block styles, WordPress-transformed theme styles, and the constrained root reproduced the issue: a 1440px canvas squeezed whole sections to the saved 780px writing width. After the fix, heroes spanned 1440/1040/780/390px canvases, inner content aligned across sections, and no horizontal overflow occurred. At 1440px, the mission grid used the saved 1180px wide width; the ordinary paragraph control retained 780px. Frontend dimensions still matched (1440px hero, 1180px grid, 130px content offset). Desktop and mobile preview screenshots were inspected. WordPress smoke and `git diff --check` passed.
+
+The existing authenticated local editor session had expired, so the actual logged-in editor screen could not be inspected. These checks used an isolated unsaved preview of WordPress's editor components rather than a new authenticated session. The in-app browser execution tool was unavailable.
+
 ## Optional in-view reveals · 21 October 2026
 
 Registered the optional `reveal` style for Group, Columns, Column, Image, Heading, Paragraph, and Cover blocks. The `at-reveal` class provides the same behavior without replacing another block style. A deferred, dependency-free frontend script uses IntersectionObserver; only opted-in elements below the viewport receive pending animation classes. Reveals run once. Mission-card delays are 0/100/200ms. Duration and distance are tokens (600ms/20px). Editor content, content before script enhancement, reduced-motion preferences, unsupported observers, keyboard focus, and printing retain visible content. Existing page content was not opted in or saved.
