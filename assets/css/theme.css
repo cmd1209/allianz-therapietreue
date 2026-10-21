@@ -64,8 +64,29 @@ body {
 }
 
 .at-header {
-  border-bottom: 1px solid var(--at-line);
+  background: transparent;
   padding-block: 1.4rem;
+}
+
+/* Overlay an opening image hero; other pages keep their normal header flow. */
+.wp-site-blocks:has(> .at-main > .wp-block-post-content > .at-hero-background:first-child) {
+  position: relative;
+}
+
+.wp-site-blocks:has(> .at-main > .wp-block-post-content > .at-hero-background:first-child) > header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 20;
+}
+
+.wp-site-blocks > .at-main > .wp-block-post-content > .at-hero-background:first-child {
+  padding-top: calc(var(--wp--custom--spacing--header) + var(--wp--custom--spacing--hero));
+}
+
+.wp-site-blocks:has(> .at-main > .wp-block-post-content > .at-hero-background:first-child) > header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > li > a,
+.wp-site-blocks:has(> .at-main > .wp-block-post-content > .at-hero-background:first-child) > header .wp-block-navigation__responsive-container-open,
+.wp-site-blocks:has(> .at-main > .wp-block-post-content > .at-hero-background:first-child) > header .at-wordmark a {
+  color: var(--wp--preset--color--background);
 }
 
 .at-header-inner {
@@ -132,7 +153,7 @@ body {
   min-height: 44px;
   padding: 0.85rem var(--wp--preset--spacing--40);
   border: 1px solid transparent;
-  border-radius: 0 16px 0 16px;
+  border-radius: var(--wp--preset--border-radius--large, 24px);
   background: var(--wp--preset--color--primary);
   color: var(--wp--preset--color--background);
   font-weight: 700;
@@ -155,6 +176,13 @@ body {
 
 .at-hero {
   padding-block: var(--wp--custom--spacing--hero);
+}
+
+/* Cover uses a row flex layout: vertical end, horizontal start. */
+.wp-block-cover.at-hero-background {
+  min-height: var(--wp--custom--layout--hero-min-height);
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 /* Cover's image and overlay must span the section, outside the content width. */
@@ -222,7 +250,7 @@ body {
   width: 100%;
   aspect-ratio: 1.04;
   object-fit: cover;
-  border-radius: 0 var(--wp--custom--radius--hero) 0 var(--wp--custom--radius--hero);
+  border-radius: var(--wp--custom--radius--hero);
 }
 
 .at-image-caption {
@@ -260,7 +288,6 @@ body {
 }
 
 .at-mission-card {
-  border-top: 2px solid var(--wp--preset--color--accent);
   padding-top: 1.25rem;
 }
 
@@ -297,7 +324,7 @@ body {
 .at-about img {
   display: block;
   width: 100%;
-  border-radius: 0 var(--wp--custom--radius--media) 0 var(--wp--custom--radius--media);
+  border-radius: var(--wp--custom--radius--media);
 }
 
 .at-about h2 {
@@ -324,8 +351,84 @@ body {
   color: var(--wp--preset--color--accent-dark);
 }
 
-.wp-block-button__link {
+/* Match native button geometry and reset WPForms' gradient state overlay. */
+.wpforms-container .wpforms-form :is(.wpforms-submit, .wpforms-page-button, [type="submit"]) {
+  min-height: 44px;
+  height: auto !important;
+  padding: 0.85rem var(--wp--preset--spacing--40) !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--wp--preset--border-radius--large, 24px) !important;
+  --wpforms-button-background-color: var(--wp--preset--color--warm);
+  --wpforms-button-background-color-alt: var(--wp--preset--color--warm);
+  background-color: var(--wp--preset--color--warm);
+  background-image: none !important;
+  font-family: var(--wp--preset--font-family--sans) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  box-shadow: none;
+  transition: background-color 160ms ease, color 160ms ease !important;
+}
+
+.wp-block-button__link,
+.wpforms-container :is(.wpforms-submit, .wpforms-page-button, [type="submit"]) {
   transition: background-color 160ms ease, color 160ms ease;
+}
+
+/* Preset color classes use !important; state colors must override them. */
+:is(
+  .wp-block-button__link.has-warm-background-color,
+  .wp-element-button.has-warm-background-color,
+  .wpforms-container :is(.wpforms-submit, .wpforms-page-button, [type="submit"])
+) {
+  color: var(--wp--preset--color--foreground) !important;
+}
+
+@media (hover: hover) {
+  :is(
+    .wp-block-button__link.has-warm-background-color,
+    .wp-element-button.has-warm-background-color,
+    .wpforms-container :is(.wpforms-submit, .wpforms-page-button, [type="submit"])
+  ):not(:disabled):not(.wpforms-disabled):not([aria-disabled="true"]):hover {
+    background-color: var(--wp--preset--color--warm-dark) !important;
+    color: var(--wp--preset--color--background) !important;
+  }
+}
+
+:is(
+  .wp-block-button__link.has-warm-background-color,
+  .wp-element-button.has-warm-background-color,
+  .wpforms-container :is(.wpforms-submit, .wpforms-page-button, [type="submit"])
+):focus-visible {
+  outline: 3px solid var(--wp--preset--color--primary) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--wp--preset--color--background) !important;
+}
+
+:is(
+  .wp-block-button__link.has-warm-background-color,
+  .wp-element-button.has-warm-background-color,
+  .wpforms-container :is(.wpforms-submit, .wpforms-page-button, [type="submit"])
+):not(:disabled):not(.wpforms-disabled):not([aria-disabled="true"]):active {
+  background-color: var(--wp--preset--color--warm-deep) !important;
+  color: var(--wp--preset--color--background) !important;
+}
+
+:is(
+  .wp-block-button__link.has-warm-background-color,
+  .wp-element-button.has-warm-background-color,
+  .wpforms-container :is(.wpforms-submit, .wpforms-page-button, [type="submit"])
+):is(:disabled, .wpforms-disabled, [aria-disabled="true"]) {
+  background-color: var(--wp--preset--color--border) !important;
+  color: var(--wp--preset--color--muted) !important;
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+/* Replace the plugin's extra focus pseudo-element with the shared focus ring. */
+.wpforms-container .wpforms-form :is(.wpforms-submit, .wpforms-page-button, [type="submit"]):focus::after {
+  content: none;
 }
 
 .at-news .wp-block-post-template {
@@ -342,7 +445,7 @@ body {
 }
 
 .at-news-card .wp-block-post-featured-image img {
-  border-radius: 0 24px 0 24px;
+  border-radius: var(--wp--preset--border-radius--large, 24px);
 }
 
 .at-news-card h3 {
@@ -518,7 +621,7 @@ body {
   width: 100%;
   max-height: 380px;
   object-fit: cover;
-  border-radius: 0 var(--wp--custom--radius--media) 0 var(--wp--custom--radius--media);
+  border-radius: var(--wp--custom--radius--media);
 }
 
 .at-download-grid {
@@ -549,7 +652,7 @@ body {
   margin: 0;
   background: var(--wp--preset--color--primary);
   color: white;
-  border-radius: 0 12px 0 12px;
+  border-radius: 12px;
   padding: 0.8rem 1.2rem;
   text-decoration: none;
 }
@@ -629,7 +732,7 @@ body {
 
   .at-hero-media img {
     aspect-ratio: 16 / 9;
-    border-radius: 0 40px 0 40px;
+    border-radius: 40px;
   }
 
   .at-hero .wp-block-buttons {
@@ -686,8 +789,9 @@ body {
     scroll-behavior: auto;
   }
 
-  .wp-block-button__link {
-    transition: none;
+  .wp-block-button__link,
+  .wpforms-container .wpforms-form :is(.wpforms-submit, .wpforms-page-button, [type="submit"]) {
+    transition: none !important;
   }
 }
 
@@ -721,4 +825,39 @@ body {
 .at-footer .wp-block-navigation__container {
   gap: 0.25rem;
   align-items: flex-start;
+}
+
+/* Applied by the frontend observer only; editor and no-JS content stay visible. */
+.at-reveal-ready {
+  translate: 0 0;
+  transition: opacity var(--wp--custom--motion--reveal-duration) ease,
+    translate var(--wp--custom--motion--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--at-reveal-index, 0) * var(--wp--custom--motion--reveal-stagger));
+}
+
+.at-reveal-ready.at-reveal-pending:not(:focus-within) {
+  opacity: 0;
+  translate: 0 var(--wp--custom--motion--reveal-distance);
+}
+
+.at-reveal-ready:focus-within {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .at-reveal-ready,
+  .at-reveal-ready.at-reveal-pending:not(:focus-within) {
+    opacity: 1;
+    translate: 0 0;
+    transition: none;
+  }
+}
+
+@media print {
+  .at-reveal-ready,
+  .at-reveal-ready.at-reveal-pending:not(:focus-within) {
+    opacity: 1;
+    translate: 0 0;
+    transition: none;
+  }
 }

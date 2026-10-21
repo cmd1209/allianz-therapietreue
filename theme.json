@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
   "version": 3,
   "settings": {
     "appearanceTools": true,
@@ -259,11 +259,13 @@
     },
     "custom": {
       "layout": {
-        "gutter": "clamp(1.25rem, 4vw, 4rem)"
+        "gutter": "clamp(1.25rem, 4vw, 4rem)",
+        "heroMinHeight": "50rem"
       },
       "spacing": {
         "hero": "clamp(2.5rem, 4.7vw, 4.5rem)",
-        "intro": "clamp(3rem, 7vw, 6rem)"
+        "intro": "clamp(3rem, 7vw, 6rem)",
+        "header": "6.5rem"
       },
       "surface": {
         "subtle": "color-mix(in srgb, var(--wp--preset--color--soft) 24%, var(--wp--preset--color--background))"
@@ -271,7 +273,37 @@
       "radius": {
         "media": "48px",
         "hero": "64px"
+      },
+      "motion": {
+        "revealDuration": "600ms",
+        "revealDistance": "20px",
+        "revealStagger": "100ms"
       }
+    },
+    "border": {
+      "radius": true,
+      "radiusSizes": [
+        {
+          "slug": "none",
+          "name": "0 px",
+          "size": "0px"
+        },
+        {
+          "slug": "small",
+          "name": "8 px",
+          "size": "8px"
+        },
+        {
+          "slug": "medium",
+          "name": "16 px",
+          "size": "16px"
+        },
+        {
+          "slug": "large",
+          "name": "24 px",
+          "size": "24px"
+        }
+      ]
     }
   },
   "styles": {
@@ -335,7 +367,7 @@
       },
       "button": {
         "border": {
-          "radius": "0 16px 0 16px",
+          "radius": "24px",
           "width": "1px",
           "color": "transparent"
         },

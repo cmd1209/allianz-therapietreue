@@ -1,5 +1,41 @@
 # Prototype verification · 19 October 2026
 
+## Optional in-view reveals · 21 October 2026
+
+Registered the optional `reveal` style for Group, Columns, Column, Image, Heading, Paragraph, and Cover blocks. The `at-reveal` class provides the same behavior without replacing another block style. A deferred, dependency-free frontend script uses IntersectionObserver; only opted-in elements below the viewport receive pending animation classes. Reveals run once. Mission-card delays are 0/100/200ms. Duration and distance are tokens (600ms/20px). Editor content, content before script enhancement, reduced-motion preferences, unsupported observers, keyboard focus, and printing retain visible content. Existing page content was not opted in or saved.
+
+PHP lint, JavaScript syntax, the WordPress smoke check, registration checks for all seven block types, and `git diff --check` passed. Isolated Chrome at 1440px and 390px widths verified opt-in-only enrollment, pending/visible opacity and translation, mission-card stagger, one-time reveals, immediate visibility on keyboard focus, initial reduced motion, live changes to reduced motion, and unsupported-observer fallback. Both widths had no horizontal overflow. Tests added style classes and a temporary focus target only in browser memory. The in-app browser execution tool was unavailable.
+
+## Hero minimum height and alignment · 21 October 2026
+
+Added `settings.custom.layout.heroMinHeight` (`50rem`) and applied its generated CSS variable to the image hero. The Cover's row flex layout now aligns content vertically to the bottom and horizontally to the start; the existing content wrapper and bottom padding are preserved. Minimum height allows the section to grow with longer content. Native block-level inline height choices still take precedence.
+
+The WordPress smoke check and `git diff --check` passed. Isolated Chrome checks at 1440, 820, 768, 390, and 320 CSS pixels confirmed an 800px minimum, bottom content gap matching section padding, unchanged left alignment, sufficient header clearance, and no horizontal overflow. Mobile navigation and the normal supporting-page header flow still passed. The desktop screenshot was visually inspected.
+
+## WPForms button overrides · 21 October 2026
+
+Extended the shared gold interaction rules to WPForms submit controls and page-navigation buttons. Added theme geometry/typography, removed the plugin's gradient overlay and duplicate focus decoration, and handled native/plugin/ARIA disabled states with immediate neutral styling. Only CSS changed; form behavior and content remain managed by WPForms.
+
+Isolated Chrome checked the live submit button's default, hover, active, focus, and combined active/focus states with the plugin stylesheet loaded: the expected palette colors, 24px radius, no gradient, focus ring, and minimum 4.72:1 enabled-state text contrast passed. The live button's temporary `wpforms-disabled` state and representative Next/Previous buttons inserted only in browser memory used neutral disabled colors. Reduced-motion emulation returned zero-second transitions. No form submission occurred. `git diff --check` passed. The in-app browser execution tool was unavailable.
+
+## Gold button states · 21 October 2026
+
+Added explicit default, hover, active, focus-visible, and native disabled treatments for buttons carrying `has-warm-background-color`, shared between frontend and editor. Important color declarations override WordPress's important palette classes. All colors reference existing palette tokens. No content or Global Styles were changed.
+
+Isolated Chrome computed-style checks confirmed gold/navy by default (6.66:1 text contrast), dark gold/white on hover (4.72:1), deep gold/white while active (11.54:1), and a visible focus ring both alone and combined with active. A temporary disabled native button rendered neutral colors and the disabled cursor. Reduced-motion emulation returned a zero-second transition. `git diff --check` passed. The in-app browser execution tool was unavailable.
+
+## Radius presets · 21 October 2026
+
+Added native Border Radius presets for 0, 8, 16, and 24px under `settings.border.radiusSizes`, with linked corners applying the selected value equally. Preserved the user's 24px button default and uniform hero radius. Remaining alternating CSS corner treatments now use equal radii on all corners; the Kontakt button matches the 24px button default. Existing media radius tokens and saved editor content remain intact. The preset picker requires WordPress 6.9+; numeric controls and literal/fallback defaults remain usable on older supported versions.
+
+The WordPress smoke check and `git diff --check` passed. A read-only check of the merged WordPress settings found exactly the four requested presets and confirmed all four CSS variables were generated, including the zero-radius option.
+
+## Transparent header · 20 October 2026
+
+The header overlays an opening image hero, with a transparent background and no bottom border. The hero reserves header clearance through `settings.custom.spacing.header`; positioning is absolute, not sticky. Pages without an opening image hero retain normal header flow. The mobile navigation overlay retains its white background and dark links. No saved page or Site Editor content was modified.
+
+The WordPress smoke check and `git diff --check` passed. Isolated Chrome checks at 1440, 820, 768, 390, and 320 CSS pixels confirmed the hero starts at y=0, copy clears the header, content alignment is preserved, and no horizontal overflow occurs. Mobile menus opened and closed with Escape. Scrolling moved the header out of view. A supporting page retained normal header flow without overlap. Desktop and mobile screenshots were visually inspected. The in-app browser execution tool was unavailable.
+
 ## Contact menu button
 
 The primary Kontakt link receives a button class during native menu conversion; the existing label, destination, and database menu remain unchanged. A local decorative SVG mask inherits the link color. PHP lint, the WordPress smoke check, and `git diff --check` passed. Isolated Chrome checks at 1440, 1024, 820, 768, 390, and 320 CSS pixels confirmed one visible contact button, the original `#kontakt` destination and target, a minimum 44px height, keyboard focus outline, and no horizontal overflow. Desktop and settled mobile-menu screenshots were inspected.

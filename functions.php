@@ -16,12 +16,25 @@ function allianz_therapietreue_setup() {
 }
 add_action( 'after_setup_theme', 'allianz_therapietreue_setup' );
 
+/** Current copyright year, using the site's configured timezone. */
+function allianz_therapietreue_year_shortcode() {
+    return esc_html( wp_date( 'Y' ) );
+}
+add_shortcode( 'allianz_year', 'allianz_therapietreue_year_shortcode' );
+
 function allianz_therapietreue_assets() {
     wp_enqueue_style(
         'allianz-therapietreue',
         get_theme_file_uri( 'assets/css/theme.css' ),
         array(),
         (string) filemtime( get_theme_file_path( 'assets/css/theme.css' ) )
+    );
+    wp_enqueue_script(
+        'allianz-therapietreue-reveal',
+        get_theme_file_uri( 'assets/js/reveal.js' ),
+        array(),
+        (string) filemtime( get_theme_file_path( 'assets/js/reveal.js' ) ),
+        array( 'strategy' => 'defer', 'in_footer' => true )
     );
 }
 add_action( 'wp_enqueue_scripts', 'allianz_therapietreue_assets' );
@@ -31,6 +44,9 @@ function allianz_therapietreue_patterns() {
     register_block_style( 'core/button', array( 'name' => 'text-link', 'label' => __( 'Textlink mit Pfeil', 'allianz-therapietreue' ) ) );
     register_block_style( 'core/group', array( 'name' => 'download-card', 'label' => __( 'Material-Karte', 'allianz-therapietreue' ) ) );
     register_block_style( 'core/paragraph', array( 'name' => 'eyebrow', 'label' => __( 'Rubrik', 'allianz-therapietreue' ) ) );
+    foreach ( array( 'core/group', 'core/columns', 'core/column', 'core/image', 'core/heading', 'core/paragraph', 'core/cover' ) as $block ) {
+        register_block_style( $block, array( 'name' => 'reveal', 'label' => __( 'Beim Scrollen einblenden', 'allianz-therapietreue' ) ) );
+    }
 }
 add_action( 'init', 'allianz_therapietreue_patterns' );
 
