@@ -1,0 +1,2501 @@
+{
+  "fileKey": "216VlC0GF4Y1wApMgvVbJY",
+  "page": "0:1",
+  "inspected": "2026-10-23",
+  "styles": [
+    {
+      "name": "Typography/Semantic/Display/Large",
+      "font": {
+        "family": "DM Sans",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "opsz": 14
+        }
+      },
+      "size": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 76
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Default",
+      "font": {
+        "family": "DM Sans",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "opsz": 14
+        }
+      },
+      "size": 56,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 64
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Highlight",
+      "font": {
+        "family": "DM Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600,
+          "opsz": 14
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/XL",
+      "font": {
+        "family": "DM Sans",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "opsz": 14
+        }
+      },
+      "size": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 96
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-XL",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 64,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 76
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-L",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-SM",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 56,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 64
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2",
+      "font": {
+        "family": "Alan Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0.07999999821186066
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3",
+      "font": {
+        "family": "Alan Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600
+        }
+      },
+      "size": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H4",
+      "font": {
+        "family": "DM Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600,
+          "opsz": 14
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H5",
+      "font": {
+        "family": "DM Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600,
+          "opsz": 14
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H6",
+      "font": {
+        "family": "DM Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600,
+          "opsz": 14
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3-Mobile",
+      "font": {
+        "family": "Alan Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Body/Large",
+      "font": {
+        "family": "DM Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "opsz": 14
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Body/Default",
+      "font": {
+        "family": "DM Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "opsz": 14
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Body/Small",
+      "font": {
+        "family": "DM Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "opsz": 14
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Lead",
+      "font": {
+        "family": "DM Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600,
+          "opsz": 14
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Label/Default",
+      "font": {
+        "family": "DM Sans",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500,
+          "opsz": 14
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Label/Small",
+      "font": {
+        "family": "DM Sans",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500,
+          "opsz": 14
+        }
+      },
+      "size": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow",
+      "font": {
+        "family": "DM Sans",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "opsz": 14
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0.03999999910593033
+      },
+      "textCase": "UPPER"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1-Mobile",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2-Mobile",
+      "font": {
+        "family": "Alan Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600
+        }
+      },
+      "size": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0.07999999821186066
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-Mobile",
+      "font": {
+        "family": "Alan Sans",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 48
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "Typography/Semantic/Body/Bold",
+      "font": {
+        "family": "DM Sans",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600,
+          "opsz": 14
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "tracking": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    }
+  ],
+  "sets": [
+    {
+      "id": "11:487",
+      "name": "Logo-Symbol",
+      "count": 2
+    },
+    {
+      "id": "71:256",
+      "name": "Allianz Adhärenz / Button",
+      "count": 15
+    },
+    {
+      "id": "88:215",
+      "name": "Icon / Arrow Right",
+      "count": 3
+    },
+    {
+      "id": "88:228",
+      "name": "Icon / Arrow Up Right",
+      "count": 3
+    },
+    {
+      "id": "88:238",
+      "name": "Icon / Chevron Right",
+      "count": 3
+    },
+    {
+      "id": "88:248",
+      "name": "Icon / Chevron Left",
+      "count": 3
+    },
+    {
+      "id": "88:258",
+      "name": "Icon / Chevron Down",
+      "count": 3
+    },
+    {
+      "id": "88:268",
+      "name": "Icon / Chevron Up",
+      "count": 3
+    },
+    {
+      "id": "88:281",
+      "name": "Icon / Plus",
+      "count": 3
+    },
+    {
+      "id": "88:291",
+      "name": "Icon / Minus",
+      "count": 3
+    },
+    {
+      "id": "88:304",
+      "name": "Icon / X",
+      "count": 3
+    },
+    {
+      "id": "88:314",
+      "name": "Icon / Check",
+      "count": 3
+    },
+    {
+      "id": "88:327",
+      "name": "Icon / Search",
+      "count": 3
+    },
+    {
+      "id": "88:337",
+      "name": "Icon / Filter",
+      "count": 3
+    },
+    {
+      "id": "88:350",
+      "name": "Icon / Mail",
+      "count": 3
+    },
+    {
+      "id": "88:360",
+      "name": "Icon / Phone",
+      "count": 3
+    },
+    {
+      "id": "88:370",
+      "name": "Icon / Message Circle",
+      "count": 3
+    },
+    {
+      "id": "88:389",
+      "name": "Icon / Users",
+      "count": 3
+    },
+    {
+      "id": "88:405",
+      "name": "Icon / Download",
+      "count": 3
+    },
+    {
+      "id": "88:421",
+      "name": "Icon / Upload",
+      "count": 3
+    },
+    {
+      "id": "88:437",
+      "name": "Icon / External Link",
+      "count": 3
+    },
+    {
+      "id": "88:459",
+      "name": "Icon / File Text",
+      "count": 3
+    },
+    {
+      "id": "88:475",
+      "name": "Icon / Info",
+      "count": 3
+    },
+    {
+      "id": "88:491",
+      "name": "Icon / Circle Alert",
+      "count": 3
+    },
+    {
+      "id": "88:504",
+      "name": "Icon / Circle Check",
+      "count": 3
+    },
+    {
+      "id": "88:523",
+      "name": "Icon / Calendar",
+      "count": 3
+    }
+  ],
+  "buttons": [
+    {
+      "id": "71:121",
+      "type": "COMPONENT",
+      "name": "Style=Primary, State=Default",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:130",
+      "type": "COMPONENT",
+      "name": "Style=Primary, State=Hover",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:139",
+      "type": "COMPONENT",
+      "name": "Style=Primary, State=Active",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:148",
+      "type": "COMPONENT",
+      "name": "Style=Primary, State=Focus",
+      "width": 149,
+      "height": 52
+    },
+    {
+      "id": "71:157",
+      "type": "COMPONENT",
+      "name": "Style=Primary, State=Disabled",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:166",
+      "type": "COMPONENT",
+      "name": "Style=Secondary, State=Default",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:175",
+      "type": "COMPONENT",
+      "name": "Style=Secondary, State=Hover",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:184",
+      "type": "COMPONENT",
+      "name": "Style=Secondary, State=Active",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:193",
+      "type": "COMPONENT",
+      "name": "Style=Secondary, State=Focus",
+      "width": 149,
+      "height": 52
+    },
+    {
+      "id": "71:202",
+      "type": "COMPONENT",
+      "name": "Style=Secondary, State=Disabled",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:211",
+      "type": "COMPONENT",
+      "name": "Style=Highlight, State=Default",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:220",
+      "type": "COMPONENT",
+      "name": "Style=Highlight, State=Hover",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:229",
+      "type": "COMPONENT",
+      "name": "Style=Highlight, State=Active",
+      "width": 141,
+      "height": 44
+    },
+    {
+      "id": "71:238",
+      "type": "COMPONENT",
+      "name": "Style=Highlight, State=Focus",
+      "width": 149,
+      "height": 52
+    },
+    {
+      "id": "71:247",
+      "type": "COMPONENT",
+      "name": "Style=Highlight, State=Disabled",
+      "width": 141,
+      "height": 44
+    }
+  ],
+  "collections": [
+    {
+      "name": "Allianz Adhärenz / Foundation",
+      "modes": [
+        "AA-Foundation"
+      ],
+      "count": 116
+    },
+    {
+      "name": "Allianz Adhärenz / Typography",
+      "modes": [
+        "AA-Typography"
+      ],
+      "count": 135
+    },
+    {
+      "name": "Allianz Adhärenz / Components",
+      "modes": [
+        "AA-Components"
+      ],
+      "count": 16
+    }
+  ],
+  "variables": [
+    {
+      "name": "Size/Base/xxs",
+      "value": 4,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/xxs",
+      "value": 4,
+      "alias": "Size/Base/xxs"
+    },
+    {
+      "name": "Size/Padding/xxs",
+      "value": 4,
+      "alias": "Size/Base/xxs"
+    },
+    {
+      "name": "Size/Base/xs",
+      "value": 8,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/xs",
+      "value": 8,
+      "alias": "Size/Base/xs"
+    },
+    {
+      "name": "Size/Padding/xs",
+      "value": 8,
+      "alias": "Size/Base/xs"
+    },
+    {
+      "name": "Size/Base/sm",
+      "value": 12,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/sm",
+      "value": 12,
+      "alias": "Size/Base/sm"
+    },
+    {
+      "name": "Size/Padding/sm",
+      "value": 12,
+      "alias": "Size/Base/sm"
+    },
+    {
+      "name": "Size/Base/md",
+      "value": 16,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/md",
+      "value": 16,
+      "alias": "Size/Base/md"
+    },
+    {
+      "name": "Size/Padding/md",
+      "value": 16,
+      "alias": "Size/Base/md"
+    },
+    {
+      "name": "Size/Base/lg",
+      "value": 24,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/lg",
+      "value": 24,
+      "alias": "Size/Base/lg"
+    },
+    {
+      "name": "Size/Padding/lg",
+      "value": 24,
+      "alias": "Size/Base/lg"
+    },
+    {
+      "name": "Size/Base/xl",
+      "value": 32,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/xl",
+      "value": 32,
+      "alias": "Size/Base/xl"
+    },
+    {
+      "name": "Size/Padding/xl",
+      "value": 32,
+      "alias": "Size/Base/xl"
+    },
+    {
+      "name": "Size/Base/2xl",
+      "value": 48,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/2xl",
+      "value": 48,
+      "alias": "Size/Base/2xl"
+    },
+    {
+      "name": "Size/Padding/2xl",
+      "value": 48,
+      "alias": "Size/Base/2xl"
+    },
+    {
+      "name": "Size/Base/3xl",
+      "value": 64,
+      "alias": null
+    },
+    {
+      "name": "Size/Gap/3xl",
+      "value": 64,
+      "alias": "Size/Base/3xl"
+    },
+    {
+      "name": "Size/Padding/3xl",
+      "value": 64,
+      "alias": "Size/Base/3xl"
+    },
+    {
+      "name": "Size/Padding/none",
+      "value": 0,
+      "alias": null
+    },
+    {
+      "name": "Size/Radius/None",
+      "value": 0,
+      "alias": null
+    },
+    {
+      "name": "Size/Radius/Pill",
+      "value": 999,
+      "alias": null
+    },
+    {
+      "name": "Size/Radius/xs",
+      "value": 4,
+      "alias": "Size/Base/xxs"
+    },
+    {
+      "name": "Size/Radius/sm",
+      "value": 8,
+      "alias": "Size/Base/xs"
+    },
+    {
+      "name": "Size/Radius/md",
+      "value": 12,
+      "alias": "Size/Base/sm"
+    },
+    {
+      "name": "Size/Radius/lg",
+      "value": 16,
+      "alias": "Size/Base/md"
+    },
+    {
+      "name": "Size/Radius/xl",
+      "value": 24,
+      "alias": "Size/Base/lg"
+    },
+    {
+      "name": "Layout/Content/Narrow",
+      "value": 720,
+      "alias": null
+    },
+    {
+      "name": "Layout/Content/Default",
+      "value": 1180,
+      "alias": null
+    },
+    {
+      "name": "Layout/Content/Wide",
+      "value": 1440,
+      "alias": null
+    },
+    {
+      "name": "Layout/Content/Medium",
+      "value": 960,
+      "alias": null
+    },
+    {
+      "name": "Layout/Media/Maximum",
+      "value": 2560,
+      "alias": null
+    },
+    {
+      "name": "Layout/Page/Layout/Breakpoint/Mobile",
+      "value": 480,
+      "alias": null
+    },
+    {
+      "name": "Layout/Page/Layout/Breakpoint/Tablet",
+      "value": 768,
+      "alias": null
+    },
+    {
+      "name": "Layout/Page/Layout/Breakpoint/Desktop",
+      "value": 1200,
+      "alias": null
+    },
+    {
+      "name": "Layout/Page/Layout/Breakpoint/Wide",
+      "value": 1440,
+      "alias": null
+    },
+    {
+      "name": "Layout/Page/Padding Mobile",
+      "value": 16,
+      "alias": "Size/Padding/md"
+    },
+    {
+      "name": "Layout/Page/Padding Tablet",
+      "value": 32,
+      "alias": "Size/Padding/xl"
+    },
+    {
+      "name": "Layout/Page/Padding Desktop",
+      "value": 48,
+      "alias": "Size/Padding/2xl"
+    },
+    {
+      "name": "Typography/Family/Sans",
+      "value": "DM Sans",
+      "alias": null
+    },
+    {
+      "name": "Typography/Family/Heading",
+      "value": "Alan Sans",
+      "alias": null
+    },
+    {
+      "name": "Typography/Weight/Regular",
+      "value": 400,
+      "alias": null
+    },
+    {
+      "name": "Typography/Weight/Medium",
+      "value": 500,
+      "alias": null
+    },
+    {
+      "name": "Typography/Weight/SemiBold",
+      "value": 600,
+      "alias": null
+    },
+    {
+      "name": "Typography/Weight/Bold",
+      "value": 700,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/xs",
+      "value": 12,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/xs",
+      "value": 16,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/sm",
+      "value": 14,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/sm",
+      "value": 20,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/md",
+      "value": 16,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/md",
+      "value": 24,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/lg",
+      "value": 18,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/lg",
+      "value": 28,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/xl",
+      "value": 20,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/xl",
+      "value": 30,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/2xl",
+      "value": 24,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/2xl",
+      "value": 32,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/3xl",
+      "value": 32,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/3xl",
+      "value": 40,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/4xl",
+      "value": 40,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/4xl",
+      "value": 48,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/5xl",
+      "value": 56,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/5xl",
+      "value": 64,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/6xl",
+      "value": 64,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/6xl",
+      "value": 76,
+      "alias": null
+    },
+    {
+      "name": "Typography/Size/7xl",
+      "value": 72,
+      "alias": null
+    },
+    {
+      "name": "Typography/Line Height/7xl",
+      "value": 96,
+      "alias": null
+    },
+    {
+      "name": "Typography/Letter-Spacing/tight",
+      "value": -0.019999999552965164,
+      "alias": null
+    },
+    {
+      "name": "Typography/Letter-Spacing/normal",
+      "value": 0,
+      "alias": null
+    },
+    {
+      "name": "Typography/Letter-Spacing/wide",
+      "value": 0.03999999910593033,
+      "alias": null
+    },
+    {
+      "name": "Typography/Letter-Spacing/wider",
+      "value": 0.07999999821186066,
+      "alias": null
+    },
+    {
+      "name": "Typography/Case/none",
+      "value": "none",
+      "alias": null
+    },
+    {
+      "name": "Typography/Case/uppercase",
+      "value": "uppercase",
+      "alias": null
+    },
+    {
+      "name": "Typography/Semantic/Display/Large/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Display/Large/Size",
+      "value": 64,
+      "alias": "Typography/Size/6xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Large/Weight",
+      "value": 700,
+      "alias": "Typography/Weight/Bold"
+    },
+    {
+      "name": "Typography/Semantic/Display/Large/Line Height",
+      "value": 76,
+      "alias": "Typography/Line Height/6xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Default/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Display/Default/Size",
+      "value": 56,
+      "alias": "Typography/Size/5xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Default/Weight",
+      "value": 700,
+      "alias": "Typography/Weight/Bold"
+    },
+    {
+      "name": "Typography/Semantic/Display/Default/Line Height",
+      "value": 64,
+      "alias": "Typography/Line Height/5xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Highlight/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Display/Highlight/Size",
+      "value": 40,
+      "alias": "Typography/Size/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Highlight/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Display/Highlight/Line Height",
+      "value": 48,
+      "alias": "Typography/Line Height/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote/Size",
+      "value": 32,
+      "alias": "Typography/Size/3xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote/Line Height",
+      "value": 32,
+      "alias": "Typography/Line Height/2xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/XL/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Display/XL/Size",
+      "value": 72,
+      "alias": "Typography/Size/7xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/XL/Weight",
+      "value": 700,
+      "alias": "Typography/Weight/Bold"
+    },
+    {
+      "name": "Typography/Semantic/Display/XL/Line Height",
+      "value": 96,
+      "alias": "Typography/Line Height/7xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-XL/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-XL/Size",
+      "value": 64,
+      "alias": "Typography/Size/6xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-XL/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-XL/Line Height",
+      "value": 76,
+      "alias": "Typography/Line Height/6xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-L/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-L/Size",
+      "value": 40,
+      "alias": "Typography/Size/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-L/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-L/Line Height",
+      "value": 48,
+      "alias": "Typography/Line Height/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-SM/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-SM/Size",
+      "value": 24,
+      "alias": "Typography/Size/2xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-SM/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-SM/Line Height",
+      "value": 30,
+      "alias": "Typography/Line Height/xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1/Size",
+      "value": 56,
+      "alias": "Typography/Size/5xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1/Weight",
+      "value": 700,
+      "alias": "Typography/Weight/Bold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1/Line Height",
+      "value": 64,
+      "alias": "Typography/Line Height/5xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2/Size",
+      "value": 40,
+      "alias": "Typography/Size/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2/Line Height",
+      "value": 40,
+      "alias": "Typography/Line Height/3xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3/Size",
+      "value": 32,
+      "alias": "Typography/Size/3xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3/Line Height",
+      "value": 40,
+      "alias": "Typography/Line Height/3xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H4/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H4/Size",
+      "value": 24,
+      "alias": "Typography/Size/2xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H4/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H4/Line Height",
+      "value": 32,
+      "alias": "Typography/Line Height/2xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H5/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H5/Size",
+      "value": 20,
+      "alias": "Typography/Size/xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H5/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H5/Line Height",
+      "value": 30,
+      "alias": "Typography/Line Height/xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H6/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H6/Size",
+      "value": 18,
+      "alias": "Typography/Size/lg"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H6/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H6/Line Height",
+      "value": 28,
+      "alias": "Typography/Line Height/lg"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3-Mobile/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3-Mobile/Size",
+      "value": 24,
+      "alias": "Typography/Size/2xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3-Mobile/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H3-Mobile/Line Height",
+      "value": 32,
+      "alias": "Typography/Line Height/2xl"
+    },
+    {
+      "name": "Typography/Semantic/Body/Large/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Body/Large/Size",
+      "value": 18,
+      "alias": "Typography/Size/lg"
+    },
+    {
+      "name": "Typography/Semantic/Body/Large/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Body/Large/Line Height",
+      "value": 28,
+      "alias": "Typography/Line Height/lg"
+    },
+    {
+      "name": "Typography/Semantic/Body/Default/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Body/Default/Size",
+      "value": 16,
+      "alias": "Typography/Size/md"
+    },
+    {
+      "name": "Typography/Semantic/Body/Default/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Body/Default/Line Height",
+      "value": 24,
+      "alias": "Typography/Line Height/md"
+    },
+    {
+      "name": "Typography/Semantic/Body/Small/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Body/Small/Size",
+      "value": 14,
+      "alias": "Typography/Size/sm"
+    },
+    {
+      "name": "Typography/Semantic/Body/Small/Weight",
+      "value": 400,
+      "alias": "Typography/Weight/Regular"
+    },
+    {
+      "name": "Typography/Semantic/Body/Small/Line Height",
+      "value": 20,
+      "alias": "Typography/Line Height/sm"
+    },
+    {
+      "name": "Typography/Semantic/Lead/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Lead/Size",
+      "value": 18,
+      "alias": "Typography/Size/lg"
+    },
+    {
+      "name": "Typography/Semantic/Lead/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Lead/Line Height",
+      "value": 28,
+      "alias": "Typography/Line Height/lg"
+    },
+    {
+      "name": "Typography/Semantic/Label/Default/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Label/Default/Size",
+      "value": 14,
+      "alias": "Typography/Size/sm"
+    },
+    {
+      "name": "Typography/Semantic/Label/Default/Weight",
+      "value": 500,
+      "alias": "Typography/Weight/Medium"
+    },
+    {
+      "name": "Typography/Semantic/Label/Default/Line Height",
+      "value": 20,
+      "alias": "Typography/Line Height/sm"
+    },
+    {
+      "name": "Typography/Semantic/Label/Small/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Label/Small/Size",
+      "value": 12,
+      "alias": "Typography/Size/xs"
+    },
+    {
+      "name": "Typography/Semantic/Label/Small/Weight",
+      "value": 500,
+      "alias": "Typography/Weight/Medium"
+    },
+    {
+      "name": "Typography/Semantic/Label/Small/Line Height",
+      "value": 16,
+      "alias": "Typography/Line Height/xs"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow/Family",
+      "value": "DM Sans",
+      "alias": "Typography/Family/Sans"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow/Size",
+      "value": 20,
+      "alias": "Typography/Size/xl"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow/Weight",
+      "value": 700,
+      "alias": "Typography/Weight/Bold"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow/Line Height",
+      "value": 30,
+      "alias": "Typography/Line Height/xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1-Mobile/Size",
+      "value": 40,
+      "alias": "Typography/Size/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1-Mobile/Line Height",
+      "value": 48,
+      "alias": "Typography/Line Height/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2-Mobile/Size",
+      "value": 32,
+      "alias": "Typography/Size/3xl"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2-Mobile/Line Height",
+      "value": 40,
+      "alias": "Typography/Line Height/3xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-Mobile/Size",
+      "value": 40,
+      "alias": "Typography/Size/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-Mobile/Line Height",
+      "value": 48,
+      "alias": "Typography/Line Height/4xl"
+    },
+    {
+      "name": "Typography/Semantic/Body/Bold/Weight",
+      "value": 600,
+      "alias": "Typography/Weight/SemiBold"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow/Letter Spacing",
+      "value": 0.03999999910593033,
+      "alias": "Typography/Letter-Spacing/wide"
+    },
+    {
+      "name": "Typography/Semantic/Eyebrow/Case",
+      "value": "uppercase",
+      "alias": "Typography/Case/uppercase"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2/Letter-Spacing",
+      "value": 0.07999999821186066,
+      "alias": "Typography/Letter-Spacing/wider"
+    },
+    {
+      "name": "Button/Padding/X",
+      "value": 24,
+      "alias": "Size/Padding/lg"
+    },
+    {
+      "name": "Button/Padding/Y",
+      "value": 12,
+      "alias": "Size/Padding/sm"
+    },
+    {
+      "name": "Button/Gap",
+      "value": 8,
+      "alias": "Size/Gap/xs"
+    },
+    {
+      "name": "Button/Radius/Top Left",
+      "value": 999,
+      "alias": "Size/Radius/Pill"
+    },
+    {
+      "name": "Button/Radius/Top Right",
+      "value": 999,
+      "alias": "Size/Radius/Pill"
+    },
+    {
+      "name": "Button/Radius/Bottom Right",
+      "value": 999,
+      "alias": "Size/Radius/Pill"
+    },
+    {
+      "name": "Button/Radius/Bottom Left",
+      "value": 999,
+      "alias": "Size/Radius/Pill"
+    },
+    {
+      "name": "Button/Radius/Pill",
+      "value": 999,
+      "alias": "Size/Radius/Pill"
+    },
+    {
+      "name": "Icon/Size/sm",
+      "value": 16,
+      "alias": null
+    },
+    {
+      "name": "Button/Icon/Size/sm",
+      "value": 16,
+      "alias": "Icon/Size/sm"
+    },
+    {
+      "name": "Icon/Size/md",
+      "value": 20,
+      "alias": null
+    },
+    {
+      "name": "Button/Icon/Size/md",
+      "value": 20,
+      "alias": "Icon/Size/md"
+    },
+    {
+      "name": "Icon/Size/lg",
+      "value": 24,
+      "alias": null
+    },
+    {
+      "name": "Button/Icon/Size/lg",
+      "value": 24,
+      "alias": "Icon/Size/lg"
+    },
+    {
+      "name": "Icon/Size/xl",
+      "value": 32,
+      "alias": null
+    },
+    {
+      "name": "Button/Icon/Size/xl",
+      "value": 32,
+      "alias": "Icon/Size/xl"
+    },
+    {
+      "name": "Color/Brand/Neutral/0",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Neutral/300",
+      "value": {
+        "r": 0.8175929188728333,
+        "g": 0.8175929188728333,
+        "b": 0.8175929188728333,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Neutral/500",
+      "value": {
+        "r": 0.524918794631958,
+        "g": 0.524918794631958,
+        "b": 0.524918794631958,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Neutral/700",
+      "value": {
+        "r": 0.25360986590385437,
+        "g": 0.25360986590385437,
+        "b": 0.25360986590385437,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Neutral/1000",
+      "value": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Secondary/100",
+      "value": {
+        "r": 0.6745098233222961,
+        "g": 0.8666666746139526,
+        "b": 0.8392156958580017,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Secondary/300",
+      "value": {
+        "r": 0.3490196168422699,
+        "g": 0.729411780834198,
+        "b": 0.6784313917160034,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Secondary/500",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.5921568870544434,
+        "b": 0.5098039507865906,
+        "a": 1
+      },
+      "alias": "Color/Named/Vital Teal"
+    },
+    {
+      "name": "Color/Named/Vital Teal",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.5921568870544434,
+        "b": 0.5098039507865906,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Secondary/700",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.3921568691730499,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Secondary/900",
+      "value": {
+        "r": 0.003921568859368563,
+        "g": 0.19607843458652496,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Primary/100",
+      "value": {
+        "r": 0.6784313917160034,
+        "g": 0.7529411911964417,
+        "b": 0.8078431487083435,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Primary/300",
+      "value": {
+        "r": 0.3529411852359772,
+        "g": 0.5098039507865906,
+        "b": 0.615686297416687,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Primary/500",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": "Color/Named/Deep Current"
+    },
+    {
+      "name": "Color/Named/Deep Current",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Primary/700",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.16862745583057404,
+        "b": 0.27450981736183167,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Primary/900",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Highlight/100",
+      "value": {
+        "r": 0.9686274528503418,
+        "g": 0.8784313797950745,
+        "b": 0.7019608020782471,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Highlight/300",
+      "value": {
+        "r": 0.9372549057006836,
+        "g": 0.7607843279838562,
+        "b": 0.40392157435417175,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Highlight/500",
+      "value": {
+        "r": 0.9058823585510254,
+        "g": 0.6352941393852234,
+        "b": 0.09803921729326248,
+        "a": 1
+      },
+      "alias": "Color/Named/Golden Hour"
+    },
+    {
+      "name": "Color/Named/Golden Hour",
+      "value": {
+        "r": 0.9058823585510254,
+        "g": 0.6352941393852234,
+        "b": 0.09803921729326248,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Highlight/700",
+      "value": {
+        "r": 0.5960784554481506,
+        "g": 0.41960784792900085,
+        "b": 0.062745101749897,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Brand/Highlight/900",
+      "value": {
+        "r": 0.2980392277240753,
+        "g": 0.2078431397676468,
+        "b": 0.0313725508749485,
+        "a": 1
+      },
+      "alias": null
+    },
+    {
+      "name": "Color/Semantic/Background/Default",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Background/White",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Background/Default-T85",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Background/Subtle",
+      "value": {
+        "r": 0.6745098233222961,
+        "g": 0.8666666746139526,
+        "b": 0.8392156958580017,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/100"
+    },
+    {
+      "name": "Color/Semantic/Background/Brand",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.16862745583057404,
+        "b": 0.27450981736183167,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/700"
+    },
+    {
+      "name": "Color/Semantic/Background/Inverse",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/900"
+    },
+    {
+      "name": "Color/Semantic/Background/Highlight",
+      "value": {
+        "r": 0.9686274528503418,
+        "g": 0.8784313797950745,
+        "b": 0.7019608020782471,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/100"
+    },
+    {
+      "name": "Color/Semantic/Surface/Default",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Surface/Subtle",
+      "value": {
+        "r": 0.6745098233222961,
+        "g": 0.8666666746139526,
+        "b": 0.8392156958580017,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/100"
+    },
+    {
+      "name": "Color/Semantic/Surface/Elevated",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Surface/Brand",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.5921568870544434,
+        "b": 0.5098039507865906,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/500"
+    },
+    {
+      "name": "Color/Semantic/Surface/Inverse",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/900"
+    },
+    {
+      "name": "Color/Semantic/Text/Brand",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/500"
+    },
+    {
+      "name": "Color/Semantic/Text/Default",
+      "value": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/1000"
+    },
+    {
+      "name": "Color/Semantic/Text/Disabled",
+      "value": {
+        "r": 0.8175929188728333,
+        "g": 0.8175929188728333,
+        "b": 0.8175929188728333,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/300"
+    },
+    {
+      "name": "Color/Semantic/Text/Inverse",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Text/Link",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/500"
+    },
+    {
+      "name": "Color/Semantic/Text/Muted",
+      "value": {
+        "r": 0.25360986590385437,
+        "g": 0.25360986590385437,
+        "b": 0.25360986590385437,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/700"
+    },
+    {
+      "name": "Color/Semantic/Text/Subtle",
+      "value": {
+        "r": 0.524918794631958,
+        "g": 0.524918794631958,
+        "b": 0.524918794631958,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/500"
+    },
+    {
+      "name": "Color/Semantic/Accent/Primary",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/500"
+    },
+    {
+      "name": "Color/Semantic/Accent/Primary Hover",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.16862745583057404,
+        "b": 0.27450981736183167,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/700"
+    },
+    {
+      "name": "Color/Semantic/Accent/Secondary",
+      "value": {
+        "r": 0.0117647061124444,
+        "g": 0.5921568870544434,
+        "b": 0.5098039507865906,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/500"
+    },
+    {
+      "name": "Color/Semantic/Accent/Highlight",
+      "value": {
+        "r": 0.9058823585510254,
+        "g": 0.6352941393852234,
+        "b": 0.09803921729326248,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/500"
+    },
+    {
+      "name": "Color/Semantic/Action/Primary/Background",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/500"
+    },
+    {
+      "name": "Color/Semantic/Action/Primary/Label",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Action/Primary/Hover",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/900"
+    },
+    {
+      "name": "Color/Semantic/Action/Primary/Active",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/900"
+    },
+    {
+      "name": "Color/Semantic/Action/Secondary/Background",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.3921568691730499,
+        "b": 0.33725491166114807,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/700"
+    },
+    {
+      "name": "Color/Semantic/Action/Secondary/Label",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Action/Secondary/Hover",
+      "value": {
+        "r": 0.003921568859368563,
+        "g": 0.19607843458652496,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/900"
+    },
+    {
+      "name": "Color/Semantic/Action/Secondary/Active",
+      "value": {
+        "r": 0.003921568859368563,
+        "g": 0.19607843458652496,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/900"
+    },
+    {
+      "name": "Color/Semantic/Action/Highlight/Background",
+      "value": {
+        "r": 0.9058823585510254,
+        "g": 0.6352941393852234,
+        "b": 0.09803921729326248,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/500"
+    },
+    {
+      "name": "Color/Semantic/Action/Highlight/Label",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/900"
+    },
+    {
+      "name": "Color/Semantic/Action/Highlight/Hover",
+      "value": {
+        "r": 0.9372549057006836,
+        "g": 0.7607843279838562,
+        "b": 0.40392157435417175,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/300"
+    },
+    {
+      "name": "Color/Semantic/Action/Highlight/Active",
+      "value": {
+        "r": 0.9686274528503418,
+        "g": 0.8784313797950745,
+        "b": 0.7019608020782471,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/100"
+    },
+    {
+      "name": "Color/Semantic/Action/Highlight/Label Inverse",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Action/Disabled/Background",
+      "value": {
+        "r": 0.8175929188728333,
+        "g": 0.8175929188728333,
+        "b": 0.8175929188728333,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/300"
+    },
+    {
+      "name": "Color/Semantic/Action/Disabled/Label",
+      "value": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/0"
+    },
+    {
+      "name": "Color/Semantic/Border/Default",
+      "value": {
+        "r": 0.8175929188728333,
+        "g": 0.8175929188728333,
+        "b": 0.8175929188728333,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/300"
+    },
+    {
+      "name": "Color/Semantic/Border/Subtle",
+      "value": {
+        "r": 0.6745098233222961,
+        "g": 0.8666666746139526,
+        "b": 0.8392156958580017,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/100"
+    },
+    {
+      "name": "Color/Semantic/Border/Strong",
+      "value": {
+        "r": 0.524918794631958,
+        "g": 0.524918794631958,
+        "b": 0.524918794631958,
+        "a": 1
+      },
+      "alias": "Color/Brand/Neutral/500"
+    },
+    {
+      "name": "Color/Semantic/Border/Brand",
+      "value": {
+        "r": 0.019607843831181526,
+        "g": 0.2549019753932953,
+        "b": 0.4156862795352936,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/500"
+    },
+    {
+      "name": "Color/Semantic/Border/Focus",
+      "value": {
+        "r": 0.5960784554481506,
+        "g": 0.41960784792900085,
+        "b": 0.062745101749897,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/700"
+    },
+    {
+      "name": "Color/Semantic/Status/Success/Foreground",
+      "value": {
+        "r": 0.003921568859368563,
+        "g": 0.19607843458652496,
+        "b": 0.16862745583057404,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/900"
+    },
+    {
+      "name": "Color/Semantic/Status/Success/Background",
+      "value": {
+        "r": 0.6745098233222961,
+        "g": 0.8666666746139526,
+        "b": 0.8392156958580017,
+        "a": 1
+      },
+      "alias": "Color/Brand/Secondary/100"
+    },
+    {
+      "name": "Color/Semantic/Status/Warning/Foreground",
+      "value": {
+        "r": 0.2980392277240753,
+        "g": 0.2078431397676468,
+        "b": 0.0313725508749485,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/900"
+    },
+    {
+      "name": "Color/Semantic/Status/Warning/Background",
+      "value": {
+        "r": 0.9686274528503418,
+        "g": 0.8784313797950745,
+        "b": 0.7019608020782471,
+        "a": 1
+      },
+      "alias": "Color/Brand/Highlight/100"
+    },
+    {
+      "name": "Color/Semantic/Status/Info/Foreground",
+      "value": {
+        "r": 0.007843137718737125,
+        "g": 0.08235294371843338,
+        "b": 0.13725490868091583,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/900"
+    },
+    {
+      "name": "Color/Semantic/Status/Info/Background",
+      "value": {
+        "r": 0.6784313917160034,
+        "g": 0.7529411911964417,
+        "b": 0.8078431487083435,
+        "a": 1
+      },
+      "alias": "Color/Brand/Primary/100"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H1-Mobile/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Heading/H2-Mobile/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    },
+    {
+      "name": "Typography/Semantic/Display/Quote-Mobile/Family",
+      "value": "Alan Sans",
+      "alias": "Typography/Family/Heading"
+    }
+  ]
+}
