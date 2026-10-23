@@ -1,6 +1,6 @@
 # Allianz Therapietreue Deutschland
 
-Independent WordPress block theme, version 0.1.2. Requires WordPress 6.6+ and PHP 8.0+. No build step, JavaScript bundle, required plugin, external font service, or custom post type.
+Independent WordPress block theme, version 0.1.3. Requires WordPress 6.6+ and PHP 8.0+. No build step, JavaScript bundle, required plugin, external font service, or custom post type.
 
 ## Local review
 
