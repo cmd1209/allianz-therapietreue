@@ -46,7 +46,7 @@ All tracking values below are **pixels**, including H2's 0.08px and Eyebrow's 0.
 | Display/Quote-L | Alan Sans 400 | 40 / 48 | 0 | theme.json + CSS: quote style quote-l | Source |
 | Display/Quote-SM | Alan Sans 400 | 24 / 30 | 0 | theme.json + CSS: quote style quote-sm | Source |
 | Heading/H1 | Alan Sans 700 | 56 / 64 | 0 | theme.json + CSS: h1 / display preset (fluid) | Source |
-| Heading/H2 | Alan Sans 600 | 40 / 40 | 0.07999999821186066 | theme.json + CSS: h2 / heading-2 preset (fluid) | Source |
+| Heading/H2 | Alan Sans 600 | 40 / 40 | 0.08 | theme.json + CSS: h2 / heading-2 preset (fluid) | Source |
 | Heading/H3 | Alan Sans 600 | 32 / 40 | 0 | theme.json + CSS: h3 / heading-3 preset (fluid) | Source |
 | Heading/H4 | DM Sans 600 | 24 / 32 | 0 | theme.json + CSS: h4 | Source |
 | Heading/H5 | DM Sans 600 | 20 / 30 | 0 | theme.json + CSS: h5 | Source |
@@ -55,12 +55,12 @@ All tracking values below are **pixels**, including H2's 0.08px and Eyebrow's 0.
 | Body/Large | DM Sans 400 | 18 / 28 | 0 | theme.json + CSS: paragraph style body-large | Source |
 | Body/Default | DM Sans 400 | 16 / 24 | 0 | theme.json + CSS: body / paragraph default; body preset | Source |
 | Body/Small | DM Sans 400 | 14 / 20 | 0 | theme.json + CSS: paragraph style body-small; small preset | Source |
-| Lead | DM Sans 600 | 18 / 28 | 0 | theme.json + CSS: See semantic role in shared CSS | Source |
+| Lead | DM Sans 600 | 18 / 28 | 0 | theme.json + CSS: paragraph style lead; lead preset | Source |
 | Label/Default | DM Sans 500 | 14 / 20 | 0 | theme.json + CSS: label style label-default / button | Source |
 | Label/Small | DM Sans 500 | 12 / 16 | 0 | theme.json + CSS: label style label-small | Source |
-| Eyebrow | DM Sans 700 | 20 / 30 | 0.03999999910593033 | theme.json + CSS: See semantic role in shared CSS | Source |
+| Eyebrow | DM Sans 700 | 20 / 30 | 0.04 | theme.json + CSS: paragraph style eyebrow | Source |
 | Heading/H1-Mobile | Alan Sans 700 | 40 / 48 | 0 | theme.json + CSS: h1 lower fluid endpoint | Source |
-| Heading/H2-Mobile | Alan Sans 600 | 32 / 40 | 0.07999999821186066 | theme.json + CSS: h2 lower fluid endpoint | Source |
+| Heading/H2-Mobile | Alan Sans 600 | 32 / 40 | 0.08 | theme.json + CSS: h2 lower fluid endpoint | Source |
 | Display/Quote-Mobile | Alan Sans 400 | 40 / 48 | 0 | theme.json + CSS: quote-xl lower fluid endpoint | Source |
 | Body/Bold | DM Sans 600 | 16 / 24 | 0 | theme.json + CSS: paragraph style body-bold | Source |
 
@@ -76,7 +76,7 @@ Focus uses warm-dark #986b10 with a white 2px separation. Disabled controls are 
 
 ## CSS and saved-content precedence audit
 
-Remove conflicting hero h1 desktop/mobile sizes/line heights, news-card h3, contact/footer heading sizes, download-card heading line height and mission paragraph line-height overrides. These currently defeat native heading/body defaults. Reconcile existing WPForms and warm-state rules in place rather than append competing implementations. Keep layout/editor-canvas/reveal CSS, heading margins, brand lockup typography and intentional media radii.
+Remove conflicting hero h1 desktop/mobile sizes/line heights, news-card h3, contact/footer title sizes (the existing titles are paragraphs: map them to Display/Highlight and H3 role tokens), download-card heading line height and mission paragraph line-height overrides. These currently defeat native heading/body defaults. Reconcile existing WPForms and warm-state rules in place rather than append competing implementations. Keep layout/editor-canvas/reveal CSS, heading margins, brand lockup typography and intentional media radii.
 
 Native saved block styles, explicit inline typography/radius/padding, saved Global Styles and customized templates can override theme defaults; do not use broad `!important` declarations to force them back. Interaction colors need narrowly scoped important rules to beat native important palette classes and WPForms styling. Review existing literal Unicode arrows and explicit white/gold colors only during an approved content migration. They remain valid legacy content.
 
@@ -91,3 +91,10 @@ Native saved block styles, explicit inline typography/radius/padding, saved Glob
 ## Proposed saved-content migration — not executed
 
 After separate approval: create a private review page from the new review pattern, choose approved photography, insert the actual configured WPForms block, and compare against a verified Figma page composition. Review any saved Alan paragraph/H2/H3 typography or old button radius overrides in Global Styles. Replace literal button arrows with curated icon classes if desired. Decide whether native writing/wide widths should become720/1180 and whether optional960/1440 wrappers and stepped gutters are needed. Apply approved changes to selected existing pages only, preserving all editorial copy and menu destinations. Header/footer edits remain in Site Editor. Never reset Global Styles or run setup to perform this migration.
+
+
+## Implementation notes
+
+Completed source changes retain body navy, original width defaults and fluid gutters as compatibility decisions. Contact's existing paragraph title now uses Display/Highlight tokens; the existing footer paragraph title uses H3 tokens, preserving their visual hierarchy without changing saved markup. A legacy mail asset remains for saved URLs; all current icon components use the curated official assets. The package script now excludes existing ZIPs because the user's pre-existing ZIP move into docs would otherwise nest a whole previous theme archive in the new package. It does not move or replace that file.
+
+See [verification.md](verification.md) for measured outcomes and limitations and [figma-alignment-pr.md](figma-alignment-pr.md) for the prepared PR description. No PR was opened.

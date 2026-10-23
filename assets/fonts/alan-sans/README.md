@@ -6,4 +6,5 @@ SIL Open Font License1.1: see [OFL.txt](OFL.txt). Sources: [Google Fonts](https:
 
 - 400: `https://fonts.gstatic.com/s/alansans/v7/zOLt4pbDmq5Eu6ebjMSx4sywa339j__gfN_oxyA.ttf`
 - 600: `https://fonts.gstatic.com/s/alansans/v7/zOLt4pbDmq5Eu6ebjMSx4sywa339j__gfAHvxyA.ttf`
-- Existing500/700 provenance remains in Git history; Google Fonts v7 static builds.
+- 500 (existing): `https://fonts.gstatic.com/s/alansans/v7/zOLt4pbDmq5Eu6ebjMSx4sywa339j__gfO3oxyA.ttf`
+- 700 (existing): `https://fonts.gstatic.com/s/alansans/v7/zOLt4pbDmq5Eu6ebjMSx4sywa339j__gfDjvxyA.ttf`
