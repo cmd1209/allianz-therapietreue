@@ -20,8 +20,8 @@ defined( 'ABSPATH' ) || exit;
 <p class="at-hero-lead has-lead-font-size">Wir bringen Menschen und Perspektiven zusammen – für einen gemeinsamen Blick auf Therapietreue in Deutschland.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/allianz/' ) ); ?>">Die Allianz kennenlernen&nbsp; ↗</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-primary at-icon-arrow-up-right at-icon-right"} -->
+<div class="wp-block-button is-style-primary at-icon-arrow-up-right at-icon-right"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/allianz/' ) ); ?>">Die Allianz kennenlernen</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->

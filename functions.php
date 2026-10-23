@@ -22,6 +22,30 @@ function allianz_therapietreue_year_shortcode() {
 }
 add_shortcode( 'allianz_year', 'allianz_therapietreue_year_shortcode' );
 
+/** Curated official Lucide assets; also used by native Button CSS classes. */
+function allianz_therapietreue_icons() {
+    return array(
+        'arrow-right', 'arrow-up-right', 'chevron-right', 'chevron-left',
+        'chevron-down', 'chevron-up', 'plus', 'minus', 'x', 'check',
+        'search', 'filter', 'mail', 'phone', 'message-circle', 'users',
+        'download', 'upload', 'external-link', 'file-text', 'info',
+        'circle-alert', 'circle-check', 'calendar',
+    );
+}
+
+/** Standalone icons: decorative by default; a supplied label makes them meaningful. */
+function allianz_therapietreue_icon_shortcode( $attributes ) {
+    $attributes = shortcode_atts( array( 'name' => '', 'size' => '20', 'label' => '' ), $attributes, 'allianz_icon' );
+    if ( ! in_array( $attributes['name'], allianz_therapietreue_icons(), true ) ) {
+        return '';
+    }
+    $size  = in_array( (string) $attributes['size'], array( '16', '20', '24' ), true ) ? $attributes['size'] : '20';
+    $label = trim( wp_strip_all_tags( $attributes['label'] ) );
+    return '<span class="at-icon at-icon-' . esc_attr( $attributes['name'] ) . ' at-icon-size-' . esc_attr( $size ) . '" '
+        . ( '' === $label ? 'aria-hidden="true"' : 'role="img" aria-label="' . esc_attr( $label ) . '"' ) . '></span>';
+}
+add_shortcode( 'allianz_icon', 'allianz_therapietreue_icon_shortcode' );
+
 function allianz_therapietreue_assets() {
     wp_enqueue_style(
         'allianz-therapietreue',
@@ -44,6 +68,20 @@ function allianz_therapietreue_patterns() {
     register_block_style( 'core/button', array( 'name' => 'text-link', 'label' => __( 'Textlink mit Pfeil', 'allianz-therapietreue' ) ) );
     register_block_style( 'core/group', array( 'name' => 'download-card', 'label' => __( 'Material-Karte', 'allianz-therapietreue' ) ) );
     register_block_style( 'core/paragraph', array( 'name' => 'eyebrow', 'label' => __( 'Rubrik', 'allianz-therapietreue' ) ) );
+    foreach ( array( 'primary' => 'Primary', 'secondary' => 'Secondary', 'highlight' => 'Highlight' ) as $name => $label ) {
+        register_block_style( 'core/button', array( 'name' => $name, 'label' => $label ) );
+    }
+    foreach ( array(
+        'body-large' => 'Body Large', 'body-small' => 'Body Small', 'lead' => 'Lead', 'body-bold' => 'Body Bold',
+        'label-default' => 'Label', 'label-small' => 'Label Small',
+        'display-large' => 'Display Large', 'display-default' => 'Display',
+        'display-highlight' => 'Display Highlight', 'display-xl' => 'Display XL',
+    ) as $name => $label ) {
+        register_block_style( 'core/paragraph', array( 'name' => $name, 'label' => $label ) );
+    }
+    foreach ( array( 'quote-xl' => 'Quote XL', 'quote-l' => 'Quote Large', 'quote-sm' => 'Quote Small' ) as $name => $label ) {
+        register_block_style( 'core/quote', array( 'name' => $name, 'label' => $label ) );
+    }
     foreach ( array( 'core/group', 'core/columns', 'core/column', 'core/image', 'core/heading', 'core/paragraph', 'core/cover' ) as $block ) {
         register_block_style( $block, array( 'name' => 'reveal', 'label' => __( 'Beim Scrollen einblenden', 'allianz-therapietreue' ) ) );
     }
