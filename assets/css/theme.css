@@ -110,6 +110,17 @@ body {
   display: block;
 }
 
+/* The uploaded white lockup has a matching color version for light headers.
+   Keep the native Image block, dimensions and any replacement artwork intact. */
+.at-header .at-brand-symbol img[src*="/Logo-AA-Kompakt-W.svg"] {
+  content: url("../images/brand/logo-compact-color.svg");
+}
+
+.wp-site-blocks:has(> .at-main > .wp-block-post-content > .at-hero-background:first-child) > header .at-brand-symbol img[src*="/Logo-AA-Kompakt-W.svg"],
+.editor-styles-wrapper:has(.at-hero-background) .at-header .at-brand-symbol img[src*="/Logo-AA-Kompakt-W.svg"] {
+  content: normal;
+}
+
 .at-wordmark {
   font-size: 1.1rem;
   line-height: 1.05;

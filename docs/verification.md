@@ -1,5 +1,11 @@
 # Theme verification
 
+## Header logo contrast · 23 October 2026
+
+The existing white compact logo now displays its matching uploaded color artwork on pages without an opening image hero. The original white image remains over the hero. The color SVG is copied unmodified into the theme; shared CSS uses the same opening-hero condition as the header overlay. The saved header Image block, source URL, dimensions and other replacement artwork remain unchanged. The editor uses the same shared styling. No database changes occurred.
+
+Read-only WordPress smoke and git diff --check passed. Isolated Chrome checked homepage, Info-Materialien and Award at 1440/390px: correct white/color variants, unchanged 130px logo width and aspect ratio, no overflow. Desktop light-header and mobile hero screenshots were visually inspected. A temporary different source image correctly bypassed the variant rule. Authenticated editor UI was not checked; the in-app execution tool remains unavailable.
+
 ## Figma design-system alignment · 23 October 2026 · v0.1.4
 
 Completed on `feature/figma-design-system-alignment`, based on fetched `origin/main` (`d76670c`). The [alignment map](figma-alignment-map.md) and [inspection snapshot](figma-design-system.json) were committed before implementation. Direct Figma reads verified 267 variables/aliases in three collections, all 26 text styles, the 15 button variants and 24 icon component sets. The separate referenced alignment brief was not supplied; direct inspection provided the values. No page-level redesign was inferred from the foundation showcases.
